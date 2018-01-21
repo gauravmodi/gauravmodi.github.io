@@ -10,7 +10,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Gaurav Modi'
 SITENAME = 'Gaurav Modi'
-SITEURL = 'https://gauravmodi.github.io'
+SITEURL = ''
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
 
