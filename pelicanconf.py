@@ -14,11 +14,25 @@ SITEURL = ''
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
 
+GITHUB_URL = 'https://github.com/gauravmodi'
+
+
 PATH = 'content'
 
+# Category Settings
+USE_FOLDER_AS_CATEGORY = True
+DEFAULT_CATEGORY = 'misc'
+DISPLAY_CATEGORIES_ON_MENU = False
+DELETE_OUTPUT_DIRECTORY = False
 
+# URL settings
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+PAGE_URL = '{category}/{slug}/'
+PAGE_SAVE_AS = '{category}/{slug}/index.html'
 
-
+#Default Date format 21 Jan 2018
+DEFAULT_DATE_FORMAT = '%d %b %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -41,6 +55,10 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images',]
 
+
+
+
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -51,7 +69,7 @@ THEME = "./themes/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'sandstone'
 PYGMENTS_STYLE = 'monokai'
 AUTHOR = 'Gaurav Modi'
-FAVICON = './favicon.ico'
+FAVICON = 'favicon.ico'
 
 
 # ipynb configuration
