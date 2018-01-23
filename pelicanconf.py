@@ -23,7 +23,10 @@ PATH = 'content'
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = 'misc'
 DISPLAY_CATEGORIES_ON_MENU = False
-DELETE_OUTPUT_DIRECTORY = False
+
+
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = [".hg", ".git", ".bzr"]
 
 # URL settings
 ARTICLE_URL = '{category}/{slug}/'
@@ -53,11 +56,10 @@ AUTHOR_FEED_RSS = None
 
 DEFAULT_PAGINATION = 10
 
-STATIC_PATHS = ['images',]
-
-
-
-
+STATIC_PATHS = [
+  'images',
+  'extra'
+]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -65,11 +67,20 @@ STATIC_PATHS = ['images',]
 # Style
 TYPOGRIFY = True
 # themes configuration
-THEME = "./themes/pelican-bootstrap3"
+THEME = "themes/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'sandstone'
 PYGMENTS_STYLE = 'monokai'
 AUTHOR = 'Gaurav Modi'
-FAVICON = 'favicon.ico'
+# FAVICON = 'favicon.ico'
+HIDE_SIDEBAR = True
+CUSTOM_CSS = 'static/css/custom.css'
+
+# Tell Pelican to change the path to 'static/custom.css' in the output dir
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/css/custom.css'},
+    # 'extra/custom.js': {'path': 'static/js/custom.js'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+}
 
 
 # ipynb configuration

@@ -72,11 +72,13 @@
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="{{ SITEURL }}/{{ article.url }}"
+                    {{ article.title }}
+                    <!-- Commenting out below code so to remove hyperlink to the article itself. -->
+<!--                     <a href="{{ SITEURL }}/{{ article.url }}"
                        rel="bookmark"
                        title="{{ _('Permalink to') }} {{ article.title|striptags }}">
                         {{ article.title }}
-                    </a>
+                    </a> -->
                 </h1>
             </header>
             <div class="entry-content">
