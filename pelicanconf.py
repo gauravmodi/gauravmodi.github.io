@@ -68,8 +68,8 @@ STATIC_PATHS = [
 TYPOGRIFY = True
 # themes configuration
 THEME = "themes/pelican-bootstrap3"
-BOOTSTRAP_THEME = 'sandstone'
-PYGMENTS_STYLE = 'monokai'
+BOOTSTRAP_THEME = 'united'
+PYGMENTS_STYLE = 'default'
 AUTHOR = 'Gaurav Modi'
 # FAVICON = 'favicon.ico'
 HIDE_SIDEBAR = True
@@ -93,9 +93,3 @@ PLUGINS = ['ipynb2pelican', 'i18n_subsites',]#'tipue_search',]
 
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-
-
-
-
-
-
