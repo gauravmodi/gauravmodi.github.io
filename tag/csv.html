@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>other - Gaurav Modi</title>
+    <title>csv - Gaurav Modi</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
 
 
     <meta name="author" content="Gaurav Modi" />
-    <meta name="keywords" content="other" />
+    <meta name="keywords" content="csv" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Gaurav Modi" />
@@ -48,8 +48,6 @@
               title="Gaurav Modi RSS Feed"/>
 
 
-        <link href="https://gauravmodi.github.io/feeds/other.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Gaurav Modi other ATOM Feed"/>
 
 </head>
 <body>
@@ -75,25 +73,84 @@ Gaurav Modi            </a>
     <div class="row">
         <div class="col-lg-12">
             <article>
-                <h2><a href="https://gauravmodi.github.io/other/car-other-slug/">Car Evaluation Data&nbsp;Set</a></h2>
+                <h2><a href="https://gauravmodi.github.io/data_wrangling/reading-csv-in-pandas/">Reading <span class="caps">CSV</span> file in python using&nbsp;pandas</a></h2>
                 <div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-data-from-CSV-file">Reading data from <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-data-from-CSV-file">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loading-packages">Loading packages<a class="anchor-link" href="#Loading-packages">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation …</span></pre></div></div></div></div></div>
-                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/other/car-other-slug/">more ...</a>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-CSV-file">Reading a <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-a-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top …</style></div></div></div></div></div></div>
+                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/data_wrangling/reading-csv-in-pandas/">more ...</a>
                 </div>
             </article>
             <hr/>

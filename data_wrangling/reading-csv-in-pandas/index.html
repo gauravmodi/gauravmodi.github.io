@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Reading CSV file in python using pandas - Gaurav Modi</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113190159-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113190159-1');
+    </script>
+
+
+
+<link rel="canonical" href="https://gauravmodi.github.io/data_wrangling/reading-csv-in-pandas/">
+
+        <meta name="author" content="Gaurav Modi" />
+        <meta name="keywords" content="csv,python,pandas" />
+        <meta name="description" content="Reading data from CSV file¶ Loading packages¶ In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top …" />
+
+        <meta property="og:site_name" content="Gaurav Modi" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Reading CSV file in python using pandas"/>
+        <meta property="og:url" content="https://gauravmodi.github.io/data_wrangling/reading-csv-in-pandas/"/>
+        <meta property="og:description" content="Reading data from CSV file¶ Loading packages¶ In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top …"/>
+        <meta property="article:published_time" content="2018-01-28" />
+            <meta property="article:section" content="data_wrangling" />
+            <meta property="article:tag" content="csv" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="pandas" />
+            <meta property="article:author" content="Gaurav Modi" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="https://gauravmodi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gauravmodi.github.io/theme/css/pygments/default.css" rel="stylesheet">
+        <link href="https://gauravmodi.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://gauravmodi.github.io/static/css/custom.css" rel="stylesheet">
+
+        <link href="https://gauravmodi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi ATOM Feed"/>
+
+        <link href="https://gauravmodi.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="Gaurav Modi RSS Feed"/>
+
+
+        <link href="https://gauravmodi.github.io/feeds/data_wrangling.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi data_wrangling ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <a href="https://gauravmodi.github.io/" class="navbar-brand">
+Gaurav Modi            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    Reading <span class="caps">CSV</span> file in python using&nbsp;pandas
+                    <!-- Commenting out below code so to remove hyperlink to the article itself. -->
+<!--                     <a href="https://gauravmodi.github.io/data_wrangling/reading-csv-in-pandas/"
+                       rel="bookmark"
+                       title="Permalink to Reading CSV file in python using pandas">
+                        Reading <span class="caps">CSV</span> file in python using&nbsp;pandas
+                    </a> -->
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <!-- <span class="label label-default">Date</span> -->
+    <span class="published">
+        <!-- <i class="fa fa-calendar"></i> -->
+        <time datetime="2018-01-28T00:00:00-08:00"> 28 Jan 2018</time>
+    </span>
+
+
+
+
+
+    <!-- <span class="label label-default">Tags</span>
+	<a href="https://gauravmodi.github.io/tag/csv.html">csv</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/python.html">python</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/pandas.html">pandas</a>
+ -->
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-data-from-CSV-file">Reading data from <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-data-from-CSV-file">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loading-packages">Loading packages<a class="anchor-link" href="#Loading-packages">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-CSV-file">Reading a <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-a-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Name       object
+Amount    float64
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-CSV-file-with-a-Date-column">Reading a <span class="caps">CSV</span> file with a Date column<a class="anchor-link" href="#Reading-a-CSV-file-with-a-Date-column">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">raw_df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>2018-01-10</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>2018-01-11</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>2018-01-12</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>2018-01-13</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>2018-01-14</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Date       object
+Name       object
+Amount    float64
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">date_parser</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dates</span><span class="p">:</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
+                 <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span>
+                 <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> 
+                 <span class="n">date_parser</span><span class="o">=</span><span class="n">date_parser</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id                 int64
+Date      datetime64[ns]
+Name              object
+Amount           float64
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>2018-01-10</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>2018-01-11</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>2018-01-12</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>2018-01-13</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>2018-01-14</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-CSV-file-with-Timestamp-Column">Reading a <span class="caps">CSV</span> file with Timestamp Column<a class="anchor-link" href="#Reading-a-CSV-file-with-Timestamp-Column">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">raw_df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Date        int64
+Name       object
+Amount    float64
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>1502841600</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>1502841600</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>1502841600</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>1502841600</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>1502841600</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">date_parser</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
+                 <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span>
+                 <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> 
+                 <span class="n">date_parser</span><span class="o">=</span><span class="n">date_parser</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id                 int64
+Date      datetime64[ns]
+Name              object
+Amount           float64
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>2017-08-15 19:00:00</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>2017-08-15 19:00:00</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>2017-08-15 19:00:00</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>2017-08-15 19:00:00</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>2017-08-15 19:00:00</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Change-data-type-of-columns-while-reading-CSV-file">Change data type of columns while reading <span class="caps">CSV</span> file<a class="anchor-link" href="#Change-data-type-of-columns-while-reading-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">raw_df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id         int64
+Name      object
+Amount     int64
+Bool        bool
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Bool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>200</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>300</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="s1">&#39;Bool&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">})</span>
+<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Name       object
+Amount    float64
+Bool        int32
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Bool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>200.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>300.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500.0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-sample-from-a-CSV-large-file">Reading a sample from a <span class="caps">CSV</span> large file<a class="anchor-link" href="#Reading-a-sample-from-a-CSV-large-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-top-'n'-rows-from-a-CSV-file">Reading top &#8216;n&#8217; rows from a <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-top-'n'-rows-from-a-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
+                 <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-a-random-sample-from-a-large-CSV-file">Reading a random sample from a large <span class="caps">CSV</span> file<a class="anchor-link" href="#Reading-a-random-sample-from-a-large-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+
+<span class="n">total_rows</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># if known you can hard code the value</span>
+
+<span class="n">sample_size</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Seed to get same sample every time we run this code</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> 
+
+<span class="n">skip</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_rows</span><span class="p">),</span> <span class="n">total_rows</span> <span class="o">-</span> <span class="n">sample_size</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skip</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Handling-NA-values-while-reading-a-CSV-file">Handling <span class="caps">NA</span> values while reading a <span class="caps">CSV</span> file<a class="anchor-link" href="#Handling-NA-values-while-reading-a-CSV-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">raw_df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id         int64
+Name      object
+Amount    object
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Null</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td><span class="caps">N.A.</span></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
+                <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span> 
+                <span class="n">na_values</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">:</span><span class="s1">&#39;N.A.&#39;</span><span class="p">,})</span>
+
+<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Name       object
+Amount    float64
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>NaN</td>
+      <td>200.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>500.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-CSV-file-having-comma-for-thousands-separator">Reading <span class="caps">CSV</span> file having comma for thousands separator<a class="anchor-link" href="#Reading-CSV-file-having-comma-for-thousands-separator">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">raw_df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id         int64
+Name      object
+Amount    object
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>1,100,000.25</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>250,000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>15,000.10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td><span class="caps">N.A.</span></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>5,000.50</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
+                <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span> 
+                <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;N.A.&#39;</span><span class="p">,</span> 
+                <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Id          int64
+Name       object
+Amount    float64
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>Jack</td>
+      <td>1100000.25</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>Emma</td>
+      <td>250000.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>Scott</td>
+      <td>15000.10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104</td>
+      <td>Evan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>105</td>
+      <td>Neil</td>
+      <td>5000.50</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Gaurav Modi
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gauravmodi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gauravmodi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gauravmodi.github.io/theme/js/respond.min.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-113190159-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>
