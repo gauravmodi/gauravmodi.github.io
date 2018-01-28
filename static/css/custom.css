@@ -26,7 +26,7 @@ Basic page styling
 Navbar
 ---------------------------------------------------------*/
 .navbar {
-  background-color: #5E354D;
+  background-color: #3B5998;
   border-bottom: 0px;
 }
 
@@ -40,6 +40,11 @@ Navbar
 /* ---------------------------------------------------------
 Articles
 ---------------------------------------------------------*/
+/*remove jupyter notebook block numbers*/
+.prompt input_prompt {
+    display: none;
+}
+
 
 .article h1{
   font-weight: bold;
@@ -107,4 +112,3 @@ Articles
   /*font-family: 'Muli', sans-serif;*/
   font-weight: bold;
 }
-
