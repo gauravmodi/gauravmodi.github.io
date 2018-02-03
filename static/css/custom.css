@@ -1,13 +1,72 @@
 /* ---------------------------------------------------------
+Navbar
+---------------------------------------------------------*/
+.navbar {
+  background-color: #3B5998;
+  border-bottom: 0px;
+}
+
+.navbar .navbar-brand, .navbar .navbar-brand:hover {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+/* ---------------------------------------------------------
 Body
 ---------------------------------------------------------*/
-/* body {
-    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
-    font-size: 18px;
+/* remove extra border around title */
+.panel {
+    margin-bottom: 00px;
+    background-color: #ffffff;
+    border: none;
+/*    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);*/
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.page-header {
+    padding-bottom: 0px;
+    margin: 0px 0 0px;
+    border-bottom: none;
+}
+
+/*Change published date font size*/
+.published {
+	font-size: 20px;
+}
+
+/* Customize body, header font-size */
+body {
+    font-size: 14px;
     line-height: 1.42857143;
-    color: #777777;
-    background-color: #ffffff
-} */
+    color: #333333;
+    background-color: #ffffff;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    font-weight: 700;
+}
+
+h1, .h1 {
+    font-size: 2em;
+}
+
+h3, .h3 {
+    font-size: 22px;
+}
+
+/*.output_wrapper .output .output_area .prompt .output_subarea output_stream output_stdout output_text*/
+/* Make output text background white */
+.output_text .pre {
+	background-color: #fffff;
+}
+
 
 /* Improve df table looks */
 th,
@@ -23,11 +82,7 @@ tr:hover {
 div.cell {
     padding: 4px
 }
-/* Increase font size of code blocks */
-/* pre {
-    font-size: 1.1em;
-} */
-/* remove block numbers */
+
 div.input_prompt {
     display: none;
 }
@@ -35,111 +90,3 @@ div.input_prompt {
 div.output_prompt {
     display: none;
 }
-
-/* ---------------------------------------------------------
-Header
----------------------------------------------------------*/
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-} */
-
-
-/* ---------------------------------------------------------
-Basic page styling
----------------------------------------------------------*/
-/* Not required for template or sticky footer method. */
-/* .content {
-  font-size: 1.05em;
-} */
-
-/* ---------------------------------------------------------
-Navbar
----------------------------------------------------------*/
-.navbar {
-  background-color: #3B5998;
-  border-bottom: 0px;
-}
-
-.navbar .navbar-brand, .navbar .navbar-brand:hover {
-  color: #fff;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.2em;
-}
-/* ---------------------------------------------------------
-Articles
----------------------------------------------------------*/
-/*remove jupyter notebook block numbers*/
-/* .prompt input_prompt {
-    display: none;
-} */
-
-
-/* .article h1{
-  font-weight: bold;
-  font-family: 'Muli', sans-serif;
-  text-align: center;
-  margin-bottom:10px;
-}
-
-.article header {
-  margin: 30px 0 30px 0;
-}
-
-.article .content{
-  font-family: "Computer Modern", serif;
-}
-
-.article .content p, .article .content li{
-  font-size: 1.25em;
-}
-
-.article .content p{
-  padding-top:.25em;
-  padding-bottom:.25em;
-} */
-
-/* .article .content p .mjx-math {
-  font-size: 1em;
-} */
-
-/* .article .content blockquote{
-  font-style: italic;
-  padding: 0 4em 0 4em;
-  line-height: 1.4em;
-  color: #776f68;
-} */
-
-/* .article .article_date{
-  font-size: 2.5em;
-  text-align: center;
-  font-family: 'Muli', sans-serif;
-}
-
-.article h2{
-  font-size: 1.6em;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-}
-
-.article h3{
-  font-size: 1.4em;
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-}
-
-.article h4{
-  font-size: 1.2em;
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-}
-
-.article h5{
-  font-size: 1.1em;
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-} */
