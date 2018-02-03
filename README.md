@@ -1,7 +1,7 @@
-# Source for gauravmodi.github.io
+# Source for https://gauravmodi.github.io
 
 ## Typical meta data for a notebook
-Place it in first block of jupyter notebook
+Place it in the first block of Jupyter notebook
 ```
 # Title: Reading CSV file in python using pandas
 + Author: Gaurav Modi
@@ -31,7 +31,7 @@ $ cd gauravmodi.github.io
 $ pelican content --output output --settings publishconf.py
 ```
 
-Push Output to GitHub from output folder
+Push Output to GitHub from the output folder
 
 ```
 $ cd output
