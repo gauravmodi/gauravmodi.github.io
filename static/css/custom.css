@@ -51,7 +51,7 @@ body {
 
 /* reduce page width */
 body > .container {
-    padding: 80px 15px 0;
+    padding: 0px 15px 0;
 }
 
 .container {
@@ -89,16 +89,20 @@ h3, .h3 {
 
 /*.output_wrapper .output .output_area .prompt .output_subarea output_stream output_stdout output_text*/
 /* Make output text background white */
-.output_text .pre {
-	background-color: #fffff;
+.output_subarea pre {
+    background: #ffffff;
 }
-
 
 /* Improve df table looks */
 th,
 td {
     padding: 8px;
 }
+
+th {
+    text-align: center;
+}
+
 
 tr:hover {
     background-color: #f5f5f5
