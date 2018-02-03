@@ -49,6 +49,32 @@ body {
     background-color: #ffffff;
 }
 
+/* reduce page width */
+body > .container {
+    padding: 80px 15px 0;
+}
+
+.container {
+    max-width: 940px;
+}
+
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Bold the headers  */
 h1, .h1, h2, .h2, h3, .h3 {
     font-weight: 700;
 }
