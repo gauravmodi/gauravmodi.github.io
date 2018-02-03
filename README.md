@@ -1,7 +1,7 @@
 # Source for gauravmodi.github.io
 
 ## Typical meta data for a notebook
-
+Place it in first block of jupyter notebook
 ```
 # Title: Reading CSV file in python using pandas
 + Author: Gaurav Modi
@@ -9,7 +9,7 @@
 + Modified: 2018-01-01
 + Description: "Reading CSV file in python using pandas"
 + Slug: post-url-to-be-used
-+ Tags:tag1, tag2, tag3
++ Tags: tag1, tag2, tag3
 ```
 
 ## Publish Locally
@@ -21,6 +21,7 @@ $ python -m pelican.server
 ```
 
 Go to: http://localhost:8000/
+<p>
 Ctrl + C to close server
 
 ## Deploy Online
