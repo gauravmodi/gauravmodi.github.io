@@ -1,5 +1,12 @@
 # Source for https://gauravmodi.github.io
 
+## Activate virtual environment
+```
+$ source projects/environments/ml_blog/bin/activate
+$ cd projects/pelican/gauravmodi.github.io/
+```
+
+
 ## Typical meta data for a notebook
 Place it in the first block of Jupyter notebook
 ```
