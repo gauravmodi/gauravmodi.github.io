@@ -23,13 +23,13 @@
 
         <meta name="author" content="Gaurav Modi" />
         <meta name="keywords" content="csv,python,pandas" />
-        <meta name="description" content="Loading packages¶pandas and numpy In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } Id Name …" />
+        <meta name="description" content="Importing packages¶pandas and numpy In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } Id Name …" />
 
         <meta property="og:site_name" content="Gaurav Modi" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Reading CSV file in Python using Pandas"/>
         <meta property="og:url" content="https://gauravmodi.github.io/data_manipulation/reading-csv-in-pandas/"/>
-        <meta property="og:description" content="Loading packages¶pandas and numpy In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } Id Name …"/>
+        <meta property="og:description" content="Importing packages¶pandas and numpy In [1]: import pandas as pd import numpy as np Reading a CSV file¶ In [3]: df = pd.read_csv(&#39;data/file.csv&#39;) df Out[3]: .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } Id Name …"/>
         <meta property="article:published_time" content="2018-01-28" />
             <meta property="article:section" content="data_manipulation" />
             <meta property="article:tag" content="csv" />
@@ -123,7 +123,7 @@ Gaurav Modi            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Loading-packages">Loading packages<a class="anchor-link" href="#Loading-packages">&#182;</a></h3><p><code>pandas</code> and <code>numpy</code></p>
+<h3 id="Importing-packages">Importing packages<a class="anchor-link" href="#Importing-packages">&#182;</a></h3><p><code>pandas</code> and <code>numpy</code></p>
 
 </div>
 </div>
@@ -133,8 +133,8 @@ Gaurav Modi            </a>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
@@ -155,7 +155,7 @@ Gaurav Modi            </a>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
 
 <span class="n">df</span>
 </pre></div>
@@ -245,7 +245,7 @@ Gaurav Modi            </a>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
 </div>
@@ -287,7 +287,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
 
 <span class="n">raw_df</span>
 </pre></div>
@@ -383,7 +383,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
 </div>
@@ -418,14 +418,14 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">date_parser</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dates</span><span class="p">:</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">date_parser</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dates</span><span class="p">:</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
                  <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span>
                  <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> 
                  <span class="n">date_parser</span><span class="o">=</span><span class="n">date_parser</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -543,8 +543,8 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">raw_df</span>
 </pre></div>
 
@@ -654,7 +654,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
 
 <span class="n">date_parser</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
 
@@ -663,7 +663,7 @@ dtype: object
                  <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> 
                  <span class="n">date_parser</span><span class="o">=</span><span class="n">date_parser</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -781,8 +781,8 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">raw_df</span>
 </pre></div>
 
@@ -892,8 +892,8 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="s1">&#39;Bool&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">})</span>
-<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="s1">&#39;Bool&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">})</span>
+<span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -1011,7 +1011,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span>
                  <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="n">df</span>
@@ -1098,7 +1098,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
 
 <span class="n">total_rows</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># if known you can hard code the value</span>
 
@@ -1194,8 +1194,8 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">raw_df</span>
 </pre></div>
 
@@ -1298,11 +1298,11 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
                 <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span> 
                 <span class="n">na_values</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">:</span><span class="s1">&#39;N.A.&#39;</span><span class="p">,})</span>
 
-<span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -1413,8 +1413,8 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">raw_df</span>
 </pre></div>
 
@@ -1517,7 +1517,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/file.csv&#39;</span><span class="p">,</span> 
                 <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Amount&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">},</span> 
                 <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;N.A.&#39;</span><span class="p">,</span> 
                 <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -1533,7 +1533,7 @@ dtype: object
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="n">df</span>
 </pre></div>
 
