@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Categories - Gaurav Modi</title>
+    <title>null_values - Gaurav Modi</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -20,7 +20,8 @@
 
 
 
-        <meta name="author" content="Gaurav Modi" />
+    <meta name="author" content="Gaurav Modi" />
+    <meta name="keywords" content="null_values" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Gaurav Modi" />
@@ -71,26 +72,65 @@ Gaurav Modi            </a>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-    <section id="categories">
-      <h1>All Categories for Gaurav Modi</h1>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-data_manipulation">data_manipulation <span class="badge pull-right">3</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-data_manipulation" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2018-02-25T00:00:00-08:00">25 Feb 2018</time></span> <a href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/">Checking Null values in&nbsp;Groupby</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2018-02-15T00:00:00-08:00">15 Feb 2018</time></span> <a href="https://gauravmodi.github.io/data_manipulation/drop-multi-level-column-index/">Drop level from a multi-level column&nbsp;index</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2018-01-28T00:00:00-08:00">28 Jan 2018</time></span> <a href="https://gauravmodi.github.io/data_manipulation/reading-csv-in-pandas/">Reading <span class="caps">CSV</span> file in Python using&nbsp;Pandas</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <article>
+                <h2><a href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/">Checking Null values in&nbsp;Groupby</a></h2>
+                <div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importing-packages">Importing packages<a class="anchor-link" href="#Importing-packages">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
 
-    </section>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-sample-dataframe">Creating sample dataframe<a class="anchor-link" href="#Creating-sample-dataframe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;shop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">],</span>
+     <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">75</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Group-By">Group …</h3></div></div></div>
+                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
     </div>
 </div>
