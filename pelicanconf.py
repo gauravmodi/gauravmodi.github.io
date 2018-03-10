@@ -37,6 +37,17 @@ PAGE_SAVE_AS = '{category}/{slug}/index.html'
 #Default Date format 21 Jan 2018
 DEFAULT_DATE_FORMAT = '%d %b %Y'
 
+# Menuitems
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+#    ('About', ''),
+    ('Contact', 'https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link'),
+#    ('CV', ''),
+    ('GitHub', 'https://github.com/gauravmodi/')
+    )
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
