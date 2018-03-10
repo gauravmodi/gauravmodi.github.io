@@ -2,8 +2,12 @@
 Navbar
 ---------------------------------------------------------*/
 .navbar {
-  background-color: #0D59B2; #3F51B5; #3B5998
+  background-color: #3F51B5; #3B5998
   border-bottom: 0px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #fff;
 }
 
 .navbar .navbar-brand, .navbar .navbar-brand:hover {
