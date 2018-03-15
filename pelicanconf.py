@@ -19,25 +19,10 @@ GITHUB_URL = 'https://github.com/gauravmodi'
 
 PATH = 'content'
 
-# Category Settings
+# Category Settings and Menu items
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = 'misc'
 DISPLAY_CATEGORIES_ON_MENU = False
-
-
-DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [".hg", ".git", ".bzr"]
-
-# URL settings
-ARTICLE_URL = '{category}/{slug}/'
-ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
-PAGE_URL = '{category}/{slug}/'
-PAGE_SAVE_AS = '{category}/{slug}/index.html'
-
-#Default Date format 21 Jan 2018
-DEFAULT_DATE_FORMAT = '%d %b %Y'
-
-# Menuitems
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
@@ -47,6 +32,19 @@ MENUITEMS = (
 #    ('CV', ''),
     ('GitHub', 'https://github.com/gauravmodi/')
     )
+
+# Retain .git files while publishing
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = [".hg", ".git", ".bzr", "CNAME"]
+
+# URL settings
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+PAGE_URL = '{category}/{slug}/'
+PAGE_SAVE_AS = '{category}/{slug}/index.html'
+
+#Default Date format 21 Jan 2018
+DEFAULT_DATE_FORMAT = '%d %b %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
