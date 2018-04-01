@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Reading JSON file in Python - Gaurav Modi</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113190159-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113190159-1');
+    </script>
+
+
+
+<link rel="canonical" href="https://gauravmodi.github.io/notebooks/read_json_in_python/">
+
+        <meta name="author" content="Gaurav Modi" />
+        <meta name="keywords" content="python,json,pandas,game_of_thrones,tidy" />
+        <meta name="description" content="Importing Packages¶ In [1]: import json import pandas as pd Data source¶ https://github.com/gauravmodi/gauravmodi.github.io/tree/source/content/data Data sample¶ { &#34;episodes&#34;:[ { &#34;seasonNum&#34;:1, &#34;episodeNum&#34;:1, &#34;episodeTitle&#34;:&#34;Winter Is Coming&#34;, &#34;episodeLink&#34;:&#34;/title/tt1480055/&#34;, &#34;episodeAirDate&#34;:&#34;2011-04-17&#34;, &#34;episodeDescription&#34;:&#34;Jon Arryn, the Hand of the King, is dead. King …" />
+
+        <meta property="og:site_name" content="Gaurav Modi" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Reading JSON file in Python"/>
+        <meta property="og:url" content="https://gauravmodi.github.io/notebooks/read_json_in_python/"/>
+        <meta property="og:description" content="Importing Packages¶ In [1]: import json import pandas as pd Data source¶ https://github.com/gauravmodi/gauravmodi.github.io/tree/source/content/data Data sample¶ { &#34;episodes&#34;:[ { &#34;seasonNum&#34;:1, &#34;episodeNum&#34;:1, &#34;episodeTitle&#34;:&#34;Winter Is Coming&#34;, &#34;episodeLink&#34;:&#34;/title/tt1480055/&#34;, &#34;episodeAirDate&#34;:&#34;2011-04-17&#34;, &#34;episodeDescription&#34;:&#34;Jon Arryn, the Hand of the King, is dead. King …"/>
+        <meta property="article:published_time" content="2018-04-01" />
+            <meta property="article:section" content="notebooks" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="json" />
+            <meta property="article:tag" content="pandas" />
+            <meta property="article:tag" content="game_of_thrones" />
+            <meta property="article:tag" content="tidy" />
+            <meta property="article:author" content="Gaurav Modi" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="https://gauravmodi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gauravmodi.github.io/theme/css/pygments/default.css" rel="stylesheet">
+        <link href="https://gauravmodi.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://gauravmodi.github.io/static/css/custom.css" rel="stylesheet">
+
+        <link href="https://gauravmodi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi ATOM Feed"/>
+
+        <link href="https://gauravmodi.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="Gaurav Modi RSS Feed"/>
+
+
+        <link href="https://gauravmodi.github.io/feeds/notebooks.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi notebooks ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gauravmodi.github.io/" class="navbar-brand">
+Gaurav Modi            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link">Contact</a></li>
+                    <li><a href="https://github.com/gauravmodi/">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/modigaurav01/">LinkedIn</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    Reading <span class="caps">JSON</span> file in&nbsp;Python
+                    <!-- Commenting out below code so to remove hyperlink to the article itself. -->
+<!--                     <a href="https://gauravmodi.github.io/notebooks/read_json_in_python/"
+                       rel="bookmark"
+                       title="Permalink to Reading JSON file in Python">
+                        Reading <span class="caps">JSON</span> file in&nbsp;Python
+                    </a> -->
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <!-- <span class="label label-default">Date</span> -->
+    <span class="published">
+        <!-- <i class="fa fa-calendar"></i> -->
+        <time datetime="2018-04-01T00:00:00-07:00"> 01 Apr 2018</time>
+    </span>
+
+
+
+
+
+    <!-- <span class="label label-default">Tags</span>
+	<a href="https://gauravmodi.github.io/tag/python.html">python</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/json.html">json</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/pandas.html">pandas</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/game_of_thrones.html">game_of_thrones</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/tidy.html">tidy</a>
+ -->
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importing-Packages">Importing Packages<a class="anchor-link" href="#Importing-Packages">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-source">Data source<a class="anchor-link" href="#Data-source">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://github.com/gauravmodi/gauravmodi.github.io/tree/source/content/data">https://github.com/gauravmodi/gauravmodi.github.io/tree/source/content/data</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-sample">Data sample<a class="anchor-link" href="#Data-sample">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>{
+   "episodes":[
+      {
+         "seasonNum":1,
+         "episodeNum":1,
+         "episodeTitle":"Winter Is Coming",
+         "episodeLink":"/title/tt1480055/",
+         "episodeAirDate":"2011-04-17",
+         "episodeDescription":"Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.",
+         "openingSequenceLocations":[
+            "King's Landing",
+            "Winterfell",
+            "The Wall",
+            "Pentos"
+         ],
+         "scenes":[
+            {
+               "sceneStart":"0:00:40",
+               "sceneEnd":"0:01:45",
+               "location":"The Wall",
+               "subLocation":"Castle Black",
+               "characters":[
+                  {"name":"Gared"},
+                  {"name":"Waymar Royce"},
+                  {"name":"Will"}
+               ]
+            }
+         ]
+      }
+   ]
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-data">Reading data<a class="anchor-link" href="#Reading-data">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/episodes.json&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#close the file to remove the original file from the memory.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Parsing-the-JSON-File-into-Tidy-Format">Parsing the <span class="caps">JSON</span> File into Tidy Format<a class="anchor-link" href="#Parsing-the-JSON-File-into-Tidy-Format">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tidy data sets have structure and working with them is easy; they’re easy to manipulate, model and visualize. Tidy data sets main concept is to arrange data in a way that each variable is a column and each observation (or case) is a row. <br><em>Source: <a href="https://www.wikiwand.com/en/Tidy_data">https://www.wikiwand.com/en/Tidy_data</a></em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">episode</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;episodes&#39;</span><span class="p">]:</span>
+    <span class="n">seasonNum</span> <span class="o">=</span> <span class="n">episode</span><span class="p">[</span><span class="s1">&#39;seasonNum&#39;</span><span class="p">]</span>
+    <span class="n">episodeNum</span> <span class="o">=</span>  <span class="n">episode</span><span class="p">[</span><span class="s1">&#39;episodeNum&#39;</span><span class="p">]</span>  
+    <span class="k">for</span> <span class="n">scene</span> <span class="ow">in</span> <span class="n">episode</span><span class="p">[</span><span class="s1">&#39;scenes&#39;</span><span class="p">]:</span>
+        <span class="n">sceneStart</span> <span class="o">=</span> <span class="n">scene</span><span class="p">[</span><span class="s1">&#39;sceneStart&#39;</span><span class="p">]</span>
+        <span class="n">sceneEnd</span> <span class="o">=</span> <span class="n">scene</span><span class="p">[</span><span class="s1">&#39;sceneEnd&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">scene</span><span class="p">[</span><span class="s1">&#39;characters&#39;</span><span class="p">]:</span>
+            <span class="n">characterName</span> <span class="o">=</span> <span class="n">character</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">seasonNum</span><span class="p">,</span> <span class="n">episodeNum</span><span class="p">,</span> <span class="n">characterName</span><span class="p">,</span> <span class="n">sceneStart</span><span class="p">,</span> <span class="n">sceneEnd</span><span class="p">]</span>
+            <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Saving-parsed-data-into-Pandas-Dataframe">Saving parsed data into Pandas Dataframe<a class="anchor-link" href="#Saving-parsed-data-into-Pandas-Dataframe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;season_num&#39;</span><span class="p">,</span> <span class="s1">&#39;episode_num&#39;</span><span class="p">,</span> <span class="s1">&#39;character_name&#39;</span><span class="p">,</span> <span class="s1">&#39;scene_start_time&#39;</span><span class="p">,</span> <span class="s1">&#39;scene_end_time&#39;</span><span class="p">],</span> 
+                  <span class="n">data</span><span class="o">=</span><span class="n">data_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Final-Table">Final Table<a class="anchor-link" href="#Final-Table">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>season_num</th>
+      <th>episode_num</th>
+      <th>character_name</th>
+      <th>scene_start_time</th>
+      <th>scene_end_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Gared</td>
+      <td>0:00:40</td>
+      <td>0:01:45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Waymar Royce</td>
+      <td>0:00:40</td>
+      <td>0:01:45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Will</td>
+      <td>0:00:40</td>
+      <td>0:01:45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Gared</td>
+      <td>0:01:45</td>
+      <td>0:03:24</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Waymar Royce</td>
+      <td>0:01:45</td>
+      <td>0:03:24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Gaurav Modi
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gauravmodi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gauravmodi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gauravmodi.github.io/theme/js/respond.min.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-113190159-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>null_values - Gaurav Modi</title>
+    <title>matplotlib - Gaurav Modi</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
 
 
     <meta name="author" content="Gaurav Modi" />
-    <meta name="keywords" content="null_values" />
+    <meta name="keywords" content="matplotlib" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Gaurav Modi" />
@@ -82,13 +82,25 @@ Gaurav Modi            </a>
     <div class="row">
         <div class="col-lg-12">
             <article>
-                <h2><a href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/">Checking Null values in&nbsp;Groupby</a></h2>
+                <h2><a href="https://gauravmodi.github.io/notebooks/kaggle_indian_startup_funding_exploration/">Exploration of Indian Startup funding data&nbsp;(Kaggle)</a></h2>
                 <div class="summary">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Importing-packages">Importing packages<a class="anchor-link" href="#Importing-packages">&#182;</a></h3>
+<ul>
+<li>Data Source: <a href="https://www.kaggle.com/sudalairajkumar/indian-startup-funding/data">https://www.kaggle.com/sudalairajkumar/indian-startup-funding/data</a></li>
+<li>Notebook on Kaggle: <a href="https://www.kaggle.com/modigaurav/time-series-analysis-and-exploration-in-python">https://www.kaggle.com/modigaurav/time-series-analysis-and-exploration-in-python</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importing-Packages">Importing Packages<a class="anchor-link" href="#Importing-Packages">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -97,45 +109,52 @@ Gaurav Modi            </a>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1000</span>
-</pre></div>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">Series</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">pysqldf</span> <span class="kn">import</span> <span class="n">SQLDF …</span></pre></div></div></div></div></div>
+                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/notebooks/kaggle_indian_startup_funding_exploration/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://gauravmodi.github.io/notebooks/kaggle_kiva_exploration/">Exploratory Analysis of Kiva Crowdfunding Data&nbsp;(Kaggle)</a></h2>
+                <div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Data Source: <a href="https://www.kaggle.com/kiva/data-science-for-good-kiva-crowdfunding/data">https://www.kaggle.com/kiva/data-science-for-good-kiva-crowdfunding/data</a></li>
+<li>Notebook on Kaggle: <a href="https://www.kaggle.com/modigaurav/exploration-of-kiva">https://www.kaggle.com/modigaurav/exploration-of-kiva</a></li>
+</ul>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-sample-dataframe">Creating sample dataframe<a class="anchor-link" href="#Creating-sample-dataframe">&#182;</a></h3>
+<h3 id="Importing-Packages">Importing Packages<a class="anchor-link" href="#Importing-Packages">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;shop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">],</span>
-     <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">75</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Group-By">Group …</h3></div></div></div>
-                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/">more ...</a>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">Series</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span><span class="p">;</span> <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">)</span>
+<span class="c1"># import warnings …</span></pre></div></div></div></div></div>
+                    <a class="btn btn-default btn-xs" href="https://gauravmodi.github.io/notebooks/kaggle_kiva_exploration/">more ...</a>
                 </div>
             </article>
             <hr/>
