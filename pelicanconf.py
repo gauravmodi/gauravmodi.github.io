@@ -30,7 +30,8 @@ MENUITEMS = (
 #    ('About', ''),
     ('Contact', 'https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link'),
 #    ('CV', ''),
-    ('GitHub', 'https://github.com/gauravmodi/')
+    ('GitHub', 'https://github.com/gauravmodi/'),
+    ('LinkedIn', 'https://www.linkedin.com/in/modigaurav01/')
     )
 
 # Retain .git files while publishing
@@ -67,7 +68,8 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = [
   'images',
-  'extra'
+  'extra',
+  'data'
 ]
 
 # Uncomment following line if you want document-relative URLs when developing
