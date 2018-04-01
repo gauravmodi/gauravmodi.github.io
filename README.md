@@ -44,7 +44,7 @@ Push Output to GitHub from the output folder
 $ cd output
 $ git add .
 $ git commit -m "Commit message"
-$ git push origin gh-pages --force
+$ git push origin master --force
 ```
 
 ## Push source code to GitHub
