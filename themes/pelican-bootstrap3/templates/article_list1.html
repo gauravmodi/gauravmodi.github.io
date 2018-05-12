@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
+    {% if categories %}
+        {% for category, articles in categories %}
+            <h2>{{ category|replace("_", " ")|title }}</h2>
+            {% for article in articles %}
+                <article>
+                    <ul>
+                        <li>
+                            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                        </li>
+                    </ul>
+                </article>
+            {% endfor %}
+            <hr/>
+        {% endfor %}
+    {% endif %}
+
+<!--
+
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <article>
@@ -18,7 +36,7 @@
             </article>
             <hr/>
         {% endfor %}
-    {% endif %}
+    {% endif %} -->
 
     {% include 'includes/pagination.html' %}
 {% endblock content %}

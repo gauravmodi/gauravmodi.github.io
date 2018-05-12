@@ -16,8 +16,10 @@ DEFAULT_LANG = 'en'
 
 GITHUB_URL = 'https://github.com/gauravmodi'
 
-
 PATH = 'content'
+
+DISPLAY_ARTICLE_INFO_ON_INDEX = False
+DISPLAY_ARTICLE_SUMMARY_ON_INDEX = False
 
 # Category Settings and Menu items
 USE_FOLDER_AS_CATEGORY = True
