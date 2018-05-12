@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi</title><link href="https://gauravmodi.github.io/" rel="alternate"></link><link href="https://gauravmodi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://gauravmodi.github.io/</id><updated>2018-04-01T00:00:00-07:00</updated><entry><title>Exploration of Indian Startup funding data (Kaggle)</title><link href="https://gauravmodi.github.io/notebooks/kaggle_indian_startup_funding_exploration/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/notebooks/kaggle_indian_startup_funding_exploration/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi</title><link href="https://gauravmodi.github.io/" rel="alternate"></link><link href="https://gauravmodi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://gauravmodi.github.io/</id><updated>2018-04-01T00:00:00-07:00</updated><entry><title>Exploration of Indian Startup funding data (Kaggle)</title><link href="https://gauravmodi.github.io/exploratory_data_analysis/kaggle_indian_startup_funding_exploration/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/exploratory_data_analysis/kaggle_indian_startup_funding_exploration/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -4312,7 +4312,7 @@ IiIiIiIiIiKiR7ARNhERERERERERPYJFIyIiIiIiIiIiegSLRkRERERERERE9AgWjYiIiIiIiIiI
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="eda"></category><category term="python"></category><category term="matplotlib"></category><category term="seaborn"></category></entry><entry><title>Exploratory Analysis of Kiva Crowdfunding Data (Kaggle)</title><link href="https://gauravmodi.github.io/notebooks/kaggle_kiva_exploration/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/notebooks/kaggle_kiva_exploration/</id><summary type="html">
+</content><category term="eda"></category><category term="python"></category><category term="matplotlib"></category><category term="seaborn"></category></entry><entry><title>Exploratory Analysis of Kiva Crowdfunding Data (Kaggle)</title><link href="https://gauravmodi.github.io/exploratory_data_analysis/kaggle_kiva_exploration/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/exploratory_data_analysis/kaggle_kiva_exploration/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -28237,7 +28237,7 @@ height=327
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="eda"></category><category term="python"></category><category term="matplotlib"></category><category term="seaborn"></category></entry><entry><title>Reading JSON file in Python</title><link href="https://gauravmodi.github.io/notebooks/read_json_in_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/notebooks/read_json_in_python/</id><summary type="html">
+</content><category term="eda"></category><category term="python"></category><category term="matplotlib"></category><category term="seaborn"></category></entry><entry><title>Reading JSON file in Python</title><link href="https://gauravmodi.github.io/data_manipulation/read_json_in_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/data_manipulation/read_json_in_python/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -28611,7 +28611,7 @@ height=327
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="json"></category><category term="pandas"></category><category term="game_of_thrones"></category><category term="tidy"></category></entry><entry><title>Time Series Visualization in Python</title><link href="https://gauravmodi.github.io/notebooks/time_series_visualization_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/notebooks/time_series_visualization_python/</id><summary type="html">
+</content><category term="python"></category><category term="json"></category><category term="pandas"></category><category term="game_of_thrones"></category><category term="tidy"></category></entry><entry><title>Time Series Visualization in Python</title><link href="https://gauravmodi.github.io/exploratory_data_analysis/time_series_visualization_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/exploratory_data_analysis/time_series_visualization_python/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;

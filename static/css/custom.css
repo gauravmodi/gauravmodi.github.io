@@ -128,3 +128,19 @@ div.input_prompt {
 div.output_prompt {
     display: none;
 }
+
+/* ---------------------------------------------------------
+                        Home Page Style
+---------------------------------------------------------*/
+/* Increase size of bullet circle*/
+/* ul li::marker {
+font-size: 2em;
+} */
+
+li::marker {
+    content: '\25CF'
+}
+
+a {
+    color: #0046B7;
+}
