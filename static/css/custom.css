@@ -1,13 +1,19 @@
 /* ---------------------------------------------------------
-Navbar
+                        NAVBAR
 ---------------------------------------------------------*/
 .navbar {
-  background-color: #3F51B5; #3B5998
+  background-color: #4F4270; /* #3F51B5; #3B5998 */
   border-bottom: 0px;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #fff;
+}
+
+/* nav bar menu item hover color */
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #222831;
 }
 
 .navbar .navbar-brand, .navbar .navbar-brand:hover {
@@ -23,7 +29,7 @@ Navbar
     margin: 0;
 }
 /* ---------------------------------------------------------
-Body
+                        BODY
 ---------------------------------------------------------*/
 /* remove extra border around title */
 .panel {
@@ -132,15 +138,14 @@ div.output_prompt {
 /* ---------------------------------------------------------
                         Home Page Style
 ---------------------------------------------------------*/
-/* Increase size of bullet circle*/
-/* ul li::marker {
-font-size: 2em;
-} */
-
-li::marker {
+/* li::marker {
     content: '\25CF'
-}
+} */
 
 a {
     color: #0046B7;
+}
+
+.homepage .panel-body .li {
+    font-size: 20px;
 }
