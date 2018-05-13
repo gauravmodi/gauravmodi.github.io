@@ -1,42 +1,32 @@
 {% extends "base.html" %}
-{% block content %}
-    {% if categories %}
-        {% for category, articles in categories %}
-            <h2>{{ category|replace("_", " ")|title }}</h2>
-            {% for article in articles %}
-                <article>
-                    <ul>
-                        <li>
-                            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-                        </li>
-                    </ul>
-                </article>
-            {% endfor %}
-            <hr/>
-        {% endfor %}
-    {% endif %}
-
-<!--
-
-    {% if articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-            <article>
-                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-                {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
-                    <div class="well well-sm">
-                        {% include "includes/article_info.html" %}
+<div class='homepage'>
+    {% block content %}
+        {% if categories %}
+            {% for category, articles in categories %}
+                <div class='row'>
+                    <div class='col-sm-12'>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">{{ category|replace("_", " ")|title }}</h3>
+                              </div>
+                              <div class="panel-body">
+                                  {% for article in articles %}
+                                      <!-- <article> -->
+                                          <ul>
+                                              <li>
+                                                  <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                                              </li>
+                                          </ul>
+                                      <!-- </article>                                 -->
+                                  {% endfor %}
+                              </div>
+                            </div>
                     </div>
-                {% endif %}
-                {% if DISPLAY_ARTICLE_SUMMARY_ON_INDEX %}
-                  <div class="summary">{{ article.summary }}
-                      {% include 'includes/comment_count.html' %}
-                      <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">{{ _('more') }} ...</a>
-                  </div>
-                {% endif %}
-            </article>
-            <hr/>
-        {% endfor %}
-    {% endif %} -->
+                </div>
+                <hr/>
+            {% endfor %}
+        {% endif %}
 
-    {% include 'includes/pagination.html' %}
-{% endblock content %}
+        {% include 'includes/pagination.html' %}
+    {% endblock content %}
+</div>

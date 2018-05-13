@@ -1,4 +1,4 @@
-# Source for https://gauravmodi.github.io
+# Source for http://gauravmodi.com
 
 ## Activate virtual environment
 ```
@@ -24,7 +24,7 @@ Place it in the first block of Jupyter notebook
 $ cd gauravmodi.github.io
 $ pelican content --debug --autoreload  --output output --settings pelicanconf.py
 $ cd output
-$ python -m pelican.server 
+$ python -m pelican.server
 ```
 
 Go to: http://localhost:8000/
