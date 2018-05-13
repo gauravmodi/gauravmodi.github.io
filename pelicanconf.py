@@ -30,15 +30,15 @@ DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
 #    ('About', ''),
-    ('Contact', 'https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link'),
+    # ('Contact', 'https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link'),
 #    ('CV', ''),
-    ('GitHub', 'https://github.com/gauravmodi/'),
-    ('LinkedIn', 'https://www.linkedin.com/in/modigaurav01/')
+    ('LinkedIn', 'https://www.linkedin.com/in/modigaurav01/'),
+    ('GitHub', 'https://github.com/gauravmodi/')
     )
 
 # Retain .git files while publishing
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [".hg", ".git", ".bzr", "CNAME"]
+OUTPUT_RETENTION = [".hg", ".git", ".bzr", "CNAME", "README.md"]
 
 # URL settings
 ARTICLE_URL = '{category}/{slug}/'
@@ -90,6 +90,7 @@ CUSTOM_CSS = 'static/css/custom.css'
 
 # Tell Pelican to change the path to 'static/custom.css' in the output dir
 EXTRA_PATH_METADATA = {
+    # input_path : output_path
     'extra/custom.css': {'path': 'static/css/custom.css'},
     # 'extra/custom.js': {'path': 'static/js/custom.js'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
