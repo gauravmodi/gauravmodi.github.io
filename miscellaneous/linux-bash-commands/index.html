@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Bash Commands - Gaurav Modi</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113190159-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113190159-1');
+    </script>
+
+
+
+<link rel="canonical" href="https://gauravmodi.github.io/miscellaneous/linux-bash-commands/">
+
+        <meta name="author" content="Gaurav Modi" />
+        <meta name="keywords" content="linux,terminal,commands,bash" />
+        <meta name="description" content="In [ ]: ``` # SOURCE https://www.datacamp.com/community/tutorials/shell-commands-data-scientist ## Number of lines in file wc -l filename.txt ## Number of words in a file wc -w filename.txt ## Number of files in a folder ls -l | wc -l ## Display top 2 lines of a file head -n 2 filename.txt …" />
+
+        <meta property="og:site_name" content="Gaurav Modi" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Bash Commands"/>
+        <meta property="og:url" content="https://gauravmodi.github.io/miscellaneous/linux-bash-commands/"/>
+        <meta property="og:description" content="In [ ]: ``` # SOURCE https://www.datacamp.com/community/tutorials/shell-commands-data-scientist ## Number of lines in file wc -l filename.txt ## Number of words in a file wc -w filename.txt ## Number of files in a folder ls -l | wc -l ## Display top 2 lines of a file head -n 2 filename.txt …"/>
+        <meta property="article:published_time" content="2018-05-01" />
+            <meta property="article:section" content="miscellaneous" />
+            <meta property="article:tag" content="linux" />
+            <meta property="article:tag" content="terminal" />
+            <meta property="article:tag" content="commands" />
+            <meta property="article:tag" content="bash" />
+            <meta property="article:author" content="Gaurav Modi" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="https://gauravmodi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gauravmodi.github.io/theme/css/pygments/default.css" rel="stylesheet">
+        <link href="https://gauravmodi.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gauravmodi.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://gauravmodi.github.io/static/css/custom.css" rel="stylesheet">
+
+        <link href="https://gauravmodi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi ATOM Feed"/>
+
+        <link href="https://gauravmodi.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="Gaurav Modi RSS Feed"/>
+
+
+        <link href="https://gauravmodi.github.io/feeds/miscellaneous.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Gaurav Modi miscellaneous ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gauravmodi.github.io/" class="navbar-brand">
+Gaurav Modi            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://www.linkedin.com/in/modigaurav01/">LinkedIn</a></li>
+                    <li><a href="https://github.com/gauravmodi/">GitHub</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    Bash&nbsp;Commands
+                    <!-- Commenting out below code so to remove hyperlink to the article itself. -->
+<!--                     <a href="https://gauravmodi.github.io/miscellaneous/linux-bash-commands/"
+                       rel="bookmark"
+                       title="Permalink to Bash Commands">
+                        Bash&nbsp;Commands
+                    </a> -->
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <!-- <span class="label label-default">Date</span> -->
+    <span class="published">
+        <!-- <i class="fa fa-calendar"></i> -->
+        <time datetime="2018-05-01T00:00:00-07:00"> 01 May 2018</time>
+    </span>
+
+
+
+
+
+    <!-- <span class="label label-default">Tags</span>
+	<a href="https://gauravmodi.github.io/tag/linux.html">linux</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/terminal.html">terminal</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/commands.html">commands</a>
+        /
+	<a href="https://gauravmodi.github.io/tag/bash.html">bash</a>
+ -->
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="err">```</span>
+<span class="c1"># SOURCE https://www.datacamp.com/community/tutorials/shell-commands-data-scientist</span>
+
+<span class="c1">## Number of lines in file</span>
+<span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="c1">## Number of words in a file</span>
+<span class="n">wc</span> <span class="o">-</span><span class="n">w</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="c1">## Number of files in a folder</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+
+<span class="c1">## Display top 2 lines of a file</span>
+<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="c1">## Display last two rows of a file</span>
+<span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="c1">## Extracting line from 101 to 120</span>
+<span class="c1"># NOTE: new file will not contain header rows, refer next two queries</span>
+<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">120</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">20</span> <span class="o">&gt;</span> <span class="n">adult_sample</span><span class="o">.</span><span class="n">csv</span>
+
+<span class="c1">## Insert a line in a file</span>
+<span class="n">echo</span> <span class="s2">&quot;column1, column2, column3&quot;</span> <span class="o">&gt;</span> <span class="n">header</span><span class="o">.</span><span class="n">csv</span>
+
+<span class="c1">## Concate two files in two </span>
+<span class="n">cat</span> <span class="n">header</span><span class="o">.</span><span class="n">csv</span> <span class="n">adult</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="c1">#inserting a header row adult.data file</span>
+	
+<span class="c1">## Regular expression</span>
+<span class="n">grep</span> <span class="s1">&#39;regex&#39;</span> <span class="n">filename</span> 
+<span class="c1"># For e.g.</span>
+<span class="n">grep</span> <span class="s2">&quot;, ?,&quot;</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="c1"># Checking in file number of lines with at least one &#39;?&#39; symbol</span>
+
+<span class="c1">## Replace a string with different string in bash</span>
+<span class="n">sed</span> <span class="s2">&quot;s/&lt;string to replace&gt;/&lt;string to replace it with&gt;/g&quot;</span> <span class="n">source_filename</span> <span class="o">&gt;</span> <span class="n">target_filename</span>
+<span class="c1"># For e.g.</span>
+<span class="n">sed</span> <span class="s2">&quot;s/, ?,/,,/g&quot;</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">&gt;</span>  <span class="n">adult</span><span class="o">.</span><span class="n">csv</span>
+
+<span class="c1">## Unique Values</span>
+<span class="c1"># uniq -c: which adds the repetition count to each line;</span>
+<span class="c1"># uniq -d: which only outputs duplicate lines; And</span>
+<span class="c1"># uniq -u: which only outputs unique lines</span>
+<span class="c1"># For checking unique values</span>
+<span class="n">sort</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">|</span> <span class="n">uniq</span> <span class="o">-</span><span class="n">d</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+
+<span class="c1"># For showing top 3 repeated lines with count</span>
+<span class="c1"># sort -r is for reverse sort</span>
+<span class="n">sort</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">|</span> <span class="n">uniq</span> <span class="o">-</span><span class="n">c</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">r</span> <span class="o">|</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">3</span>
+
+<span class="c1">## Selecting columns with cut</span>
+<span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="n">delimiter</span> <span class="o">-</span><span class="n">f</span> <span class="n">column_number</span> <span class="n">filename</span>
+<span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;,&quot;</span> <span class="o">-</span><span class="n">f</span> <span class="mi">2</span> <span class="n">adult</span><span class="o">.</span><span class="n">csv</span> <span class="o">|</span> <span class="n">head</span> <span class="o">-</span><span class="mi">3</span>
+
+<span class="c1">## Looping</span>
+<span class="k">while</span> <span class="n">true</span><span class="p">;</span> <span class="n">do</span>
+    <span class="n">_do</span> <span class="n">something_</span> <span class="p">;</span>
+<span class="n">done</span>
+
+<span class="c1"># To replace space in filenames to underscore</span>
+<span class="n">replace_source</span><span class="o">=</span><span class="s1">&#39; &#39;</span>
+<span class="n">replace_target</span><span class="o">=</span><span class="s1">&#39;_&#39;</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="o">./*.</span><span class="n">csv</span><span class="p">;</span> <span class="n">do</span>
+    <span class="n">new_filename</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">filename</span><span class="o">//</span><span class="err">$</span><span class="n">replace_source</span><span class="o">/</span><span class="err">$</span><span class="n">replace_target</span><span class="p">}</span>
+    <span class="n">mv</span> <span class="s2">&quot;$filename&quot;</span> <span class="s2">&quot;$new_filename&quot;</span>
+<span class="n">done</span>
+
+<span class="c1">## Variables</span>
+<span class="n">filename</span><span class="o">=</span> <span class="s1">&#39;file-1&#39;</span>
+<span class="n">new_filename</span> <span class="o">=</span> <span class="s1">&#39;file_1&#39;</span>
+<span class="n">echo</span> <span class="err">$</span><span class="n">filename</span>
+
+<span class="c1"># To use variables in commands </span>
+<span class="n">mv</span> <span class="s2">&quot;$filename&quot;</span> <span class="s2">&quot;$new_filename&quot;</span>
+
+<span class="c1"># query for opening a csv and replace a column value with some other and </span>
+<span class="c1"># save it into a new Excel.</span>
+<span class="c1"># &quot;,&quot; : seperator</span>
+<span class="c1"># FNR &gt; 1: skip first row</span>
+<span class="c1"># $2: row number</span>
+<span class="c1"># print ; : print all columns</span>
+<span class="n">awk</span> <span class="o">-</span><span class="n">F</span> <span class="s2">&quot;,&quot;</span>  <span class="s1">&#39;FNR &gt; 1 {$2=0; print ;}&#39;</span> <span class="n">fortune500</span><span class="o">.</span><span class="n">csv</span> <span class="o">&gt;</span> <span class="n">new503</span><span class="o">.</span><span class="n">csv</span>
+
+<span class="c1"># Take just one column and save it in new csv</span>
+<span class="n">awk</span> <span class="o">-</span><span class="n">F</span> <span class="s2">&quot;,&quot;</span> <span class="s1">&#39;{print $1}&#39;</span> <span class="n">fortune500</span><span class="o">.</span><span class="n">csv</span> <span class="o">&gt;</span> <span class="n">new502</span><span class="o">.</span><span class="n">csv</span>
+<span class="err">```</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 <a href="https://www.linkedin.com/in/modigaurav01/" target="_blank">Gaurav Modi</a>
+            <!-- &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> -->         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gauravmodi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gauravmodi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gauravmodi.github.io/theme/js/respond.min.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-113190159-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

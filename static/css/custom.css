@@ -149,3 +149,8 @@ a {
 .homepage .panel-body .li {
     font-size: 20px;
 }
+
+a:focus {
+    color: #000;
+    text-decoration: underline;
+}
