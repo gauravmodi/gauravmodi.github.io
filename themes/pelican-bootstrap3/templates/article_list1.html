@@ -7,15 +7,17 @@
                     <div class='col-sm-12'>
                             <div class="panel panel-default">
                               <div class="panel-heading">
-                                <h3 class="panel-title">{{ category|replace("_", " ")|title }}</h3>
+                                <h3>{{ category|replace("_", " ")|title }}</h3>
                               </div>
                               <div class="panel-body">
                                   {% for article in articles %}
                                       <!-- <article> -->
                                           <ul>
-                                              <li>
-                                                  <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-                                              </li>
+                                              <h3>
+                                                  <li>
+                                                      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                                                  </li>
+                                              </h3>
                                           </ul>
                                       <!-- </article>                                 -->
                                   {% endfor %}

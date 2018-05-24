@@ -10,7 +10,7 @@ $ cd projects/pelican/gauravmodi.github.io/
 ## Typical meta data for a notebook
 Place it in the first block of Jupyter notebook
 ```
-# Title: Reading CSV file in python using pandas
++ Title: Reading CSV file in python using pandas
 + Author: Gaurav Modi
 + Date: 2018-01-01
 + Modified: 2018-01-01
@@ -24,7 +24,7 @@ Place it in the first block of Jupyter notebook
 $ cd gauravmodi.github.io
 $ pelican content --debug --autoreload  --output output --settings pelicanconf.py
 $ cd output
-$ python -m pelican.server
+$ python -m pelican.server # OR python -m pelican.server 8000
 ```
 
 Go to: http://localhost:8000/
