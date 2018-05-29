@@ -1,4 +1,4 @@
-# Source for http://gauravmodi.com
+# Source for https://gauravmodi.com
 
 ## Activate virtual environment
 ```
