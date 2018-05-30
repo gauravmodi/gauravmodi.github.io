@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi - data_manipulation</title><link href="https://gauravmodi.github.io/" rel="alternate"></link><link href="https://gauravmodi.github.io/feeds/data_manipulation.atom.xml" rel="self"></link><id>https://gauravmodi.github.io/</id><updated>2018-04-01T00:00:00-07:00</updated><entry><title>Reading JSON file in Python</title><link href="https://gauravmodi.github.io/data_manipulation/read_json_in_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-04-01:/data_manipulation/read_json_in_python/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi - data_manipulation</title><link href="https://gauravmodi.com/" rel="alternate"></link><link href="https://gauravmodi.com/feeds/data_manipulation.atom.xml" rel="self"></link><id>https://gauravmodi.com/</id><updated>2018-04-01T00:00:00-07:00</updated><entry><title>Reading JSON file in Python</title><link href="https://gauravmodi.com/data_manipulation/read_json_in_python/" rel="alternate"></link><published>2018-04-01T00:00:00-07:00</published><updated>2018-04-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2018-04-01:/data_manipulation/read_json_in_python/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -373,7 +373,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="json"></category><category term="pandas"></category><category term="game_of_thrones"></category><category term="tidy"></category></entry><entry><title>Checking Null values in Groupby</title><link href="https://gauravmodi.github.io/data_manipulation/null-values-in-groupby/" rel="alternate"></link><published>2018-02-25T00:00:00-08:00</published><updated>2018-02-25T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-02-25:/data_manipulation/null-values-in-groupby/</id><summary type="html">
+</content><category term="python"></category><category term="json"></category><category term="pandas"></category><category term="game_of_thrones"></category><category term="tidy"></category></entry><entry><title>Checking Null values in Groupby</title><link href="https://gauravmodi.com/data_manipulation/null-values-in-groupby/" rel="alternate"></link><published>2018-02-25T00:00:00-08:00</published><updated>2018-02-25T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2018-02-25:/data_manipulation/null-values-in-groupby/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -681,7 +681,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="null_values"></category><category term="groupby"></category><category term="python"></category><category term="pandas"></category></entry><entry><title>Drop level from a multi-level column index</title><link href="https://gauravmodi.github.io/data_manipulation/drop-multi-level-column-index/" rel="alternate"></link><published>2018-02-15T00:00:00-08:00</published><updated>2018-02-15T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-02-15:/data_manipulation/drop-multi-level-column-index/</id><summary type="html">
+</content><category term="null_values"></category><category term="groupby"></category><category term="python"></category><category term="pandas"></category></entry><entry><title>Drop level from a multi-level column index</title><link href="https://gauravmodi.com/data_manipulation/drop-multi-level-column-index/" rel="alternate"></link><published>2018-02-15T00:00:00-08:00</published><updated>2018-02-15T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2018-02-15:/data_manipulation/drop-multi-level-column-index/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -1050,7 +1050,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="multi-level-index"></category><category term="python"></category><category term="pandas"></category></entry><entry><title>Reading CSV file in Python using Pandas</title><link href="https://gauravmodi.github.io/data_manipulation/reading-csv-in-pandas/" rel="alternate"></link><published>2018-01-28T00:00:00-08:00</published><updated>2018-01-28T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-01-28:/data_manipulation/reading-csv-in-pandas/</id><summary type="html">
+</content><category term="multi-level-index"></category><category term="python"></category><category term="pandas"></category></entry><entry><title>Reading CSV file in Python using Pandas</title><link href="https://gauravmodi.com/data_manipulation/reading-csv-in-pandas/" rel="alternate"></link><published>2018-01-28T00:00:00-08:00</published><updated>2018-01-28T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2018-01-28:/data_manipulation/reading-csv-in-pandas/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;

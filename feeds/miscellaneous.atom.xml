@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi - miscellaneous</title><link href="https://gauravmodi.github.io/" rel="alternate"></link><link href="https://gauravmodi.github.io/feeds/miscellaneous.atom.xml" rel="self"></link><id>https://gauravmodi.github.io/</id><updated>2018-05-01T00:00:00-07:00</updated><entry><title>Bash Commands</title><link href="https://gauravmodi.github.io/miscellaneous/linux-bash-commands/" rel="alternate"></link><published>2018-05-01T00:00:00-07:00</published><updated>2018-05-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2018-05-01:/miscellaneous/linux-bash-commands/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi - miscellaneous</title><link href="https://gauravmodi.com/" rel="alternate"></link><link href="https://gauravmodi.com/feeds/miscellaneous.atom.xml" rel="self"></link><id>https://gauravmodi.com/</id><updated>2018-05-01T00:00:00-07:00</updated><entry><title>Bash Commands</title><link href="https://gauravmodi.com/miscellaneous/linux-bash-commands/" rel="alternate"></link><published>2018-05-01T00:00:00-07:00</published><updated>2018-05-01T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2018-05-01:/miscellaneous/linux-bash-commands/</id><summary type="html">
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
@@ -147,7 +147,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="linux"></category><category term="terminal"></category><category term="commands"></category><category term="bash"></category></entry><entry><title>Jupyter Notebook Settings</title><link href="https://gauravmodi.github.io/miscellaneous/jupyter-notebook-settings/" rel="alternate"></link><published>2017-10-23T00:00:00-07:00</published><updated>2017-10-23T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2017-10-23:/miscellaneous/jupyter-notebook-settings/</id><summary type="html">
+</content><category term="linux"></category><category term="terminal"></category><category term="commands"></category><category term="bash"></category></entry><entry><title>Jupyter Notebook Settings</title><link href="https://gauravmodi.com/miscellaneous/jupyter-notebook-settings/" rel="alternate"></link><published>2017-10-23T00:00:00-07:00</published><updated>2017-10-23T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2017-10-23:/miscellaneous/jupyter-notebook-settings/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -433,7 +433,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="jupyter"></category><category term="ipython"></category></entry><entry><title>Seaborn Cookbook</title><link href="https://gauravmodi.github.io/miscellaneous/seaborn-cookbook/" rel="alternate"></link><published>2017-10-08T00:00:00-07:00</published><updated>2017-10-08T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2017-10-08:/miscellaneous/seaborn-cookbook/</id><summary type="html">
+</content><category term="jupyter"></category><category term="ipython"></category></entry><entry><title>Seaborn Cookbook</title><link href="https://gauravmodi.com/miscellaneous/seaborn-cookbook/" rel="alternate"></link><published>2017-10-08T00:00:00-07:00</published><updated>2017-10-08T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2017-10-08:/miscellaneous/seaborn-cookbook/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -683,7 +683,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="seaborn"></category><category term="matplotlib"></category><category term="visualization"></category></entry><entry><title>Matplotlib Cookbook</title><link href="https://gauravmodi.github.io/miscellaneous/matplotlib-cookbook/" rel="alternate"></link><published>2017-08-13T00:00:00-07:00</published><updated>2017-08-13T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.github.io,2017-08-13:/miscellaneous/matplotlib-cookbook/</id><summary type="html">
+</content><category term="seaborn"></category><category term="matplotlib"></category><category term="visualization"></category></entry><entry><title>Matplotlib Cookbook</title><link href="https://gauravmodi.com/miscellaneous/matplotlib-cookbook/" rel="alternate"></link><published>2017-08-13T00:00:00-07:00</published><updated>2017-08-13T00:00:00-07:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2017-08-13:/miscellaneous/matplotlib-cookbook/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
