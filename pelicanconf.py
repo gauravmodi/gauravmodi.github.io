@@ -9,8 +9,10 @@ from __future__ import unicode_literals
 
 
 AUTHOR = 'Gaurav Modi'
-SITENAME = 'Gaurav Modi'
+SITENAME = "Gaurav Modi"
 SITEURL = ''
+SITEDESCRIPTION = "Data Analysis and Machine Learning Blog"
+OPEN_GRAPH_IMAGE = 'images/gauravmodi.jpg'
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
 
@@ -70,8 +72,8 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = [
   'images',
-  'extra',
-  'data'
+  'data',
+  'extra'
 ]
 
 # Uncomment following line if you want document-relative URLs when developing
