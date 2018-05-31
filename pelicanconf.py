@@ -33,10 +33,10 @@ DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
 #    ('About', ''),
     # ('Contact', 'https://docs.google.com/forms/d/e/1FAIpQLSd_67Y_w4mvfDw3KQQEJJygHSumOYqH-eiByDI-xUStsw0T1Q/viewform?usp=sf_link'),
-#    ('CV', ''),
+    ('RESUME', 'https://drive.google.com/file/d/1roCEHY44Z62vyD_CLdzFiE5tL1MxrCPw/view?usp=sharing'),
     ('LinkedIn', 'https://www.linkedin.com/in/modigaurav01/'),
     ('GitHub', 'https://github.com/gauravmodi/')
-    )
+)
 
 # Retain .git files while publishing
 DELETE_OUTPUT_DIRECTORY = True

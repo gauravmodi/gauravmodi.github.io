@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 <div class='homepage'>
     {% block content %}
+        <div class="alert alert-info" role="alert">
+            <h4><a href='http://gauravmodi.pythonanywhere.com/' target="_blank">Check out demo of - <b>Flask web app with Machine Learning!</b></a></h4>
+        </div>
         {% if categories %}
             {% for category, articles in categories %}
                 <div class='row'>
