@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Gaurav Modi</title><link>https://gauravmodi.com/</link><description></description><lastBuildDate>Thu, 10 May 2018 00:00:00 -0700</lastBuildDate><item><title>New York Green Taxi Data Analysis</title><link>https://gauravmodi.com/01-data-analysis-notebooks/new-york-green-taxi-analysis/</link><description>
+<rss version="2.0"><channel><title>Gaurav Modi</title><link>https://gauravmodi.com/</link><description></description><lastBuildDate>Tue, 05 Jun 2018 00:00:00 -0700</lastBuildDate><item><title>New York Green Taxi Data Analysis</title><link>https://gauravmodi.com/01-data-analysis-notebooks/new-york-green-taxi-analysis/</link><description>
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -8,47 +8,12 @@
 &lt;h3 id="Introduction"&gt;&lt;u&gt;Introduction&lt;/u&gt;&lt;a class="anchor-link" href="#Introduction"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In this analysis, I will be analysing the New York Taxi Data for Green&amp;nbsp;Taxi.&lt;/p&gt;
 &lt;p&gt;Data used is from Sept, 1st 2015 to Sept, 30th 2015.
 
-&lt;u&gt;&lt;b&gt;Green Taxi&lt;/b&gt;&lt;/u&gt;: Started in 2013, to serve outer-borough commuters. Therefore, Green Taxis are not allowed to make pickups …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Thu, 10 May 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-05-10:/01-data-analysis-notebooks/new-york-green-taxi-analysis/</guid><category>python</category><category>data analysis</category><category>predictive modeling</category><category>machine learning</category><category>new york taxi</category></item><item><title>One-Word-In, One-Word-Out Sequences</title><link>https://gauravmodi.com/02-natural_-language_processing/one-word-in-one-word-out-sequences/</link><description>
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[0]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.preprocessing.text&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Tokenizer&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.utils&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;to_categorical&lt;/span&gt;
-
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Embedding&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LSTM&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
+&lt;u&gt;&lt;b&gt;Green Taxi&lt;/b&gt;&lt;/u&gt;: Started in 2013, to serve outer-borough commuters. Therefore, Green Taxis are not allowed to make pickups …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Tue, 05 Jun 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-06-05:/01-data-analysis-notebooks/new-york-green-taxi-analysis/</guid><category>python</category><category>data analysis</category><category>predictive modeling</category><category>machine learning</category><category>new york taxi</category></item><item><title>Time Series Analysis and Forecasting in Python **(In-process)**</title><link>https://gauravmodi.com/01-data-analysis-notebooks/time-series-analysis-python/</link><description>
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Sample-Text"&gt;Sample Text&lt;a class="anchor-link" href="#Sample-Text"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[0]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# source text&lt;/span&gt;
-&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot; Jack and Jill went up the hill&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&lt;/span&gt;
-&lt;span class="s2"&gt;        To fetch a pail of water …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Thu, 10 May 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-05-10:/02-natural_-language_processing/one-word-in-one-word-out-sequences/</guid><category>nlp</category><category>word_prediction</category><category>python</category><category>keras</category></item><item><title>Time Series Analysis in Python **(In-process)**</title><link>https://gauravmodi.com/01-data-analysis-notebooks/time-series-analysis-python/</link><description>
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="This-is-in-process-analysis,-will-complete-it-soon."&gt;&lt;font color="red"&gt;This is in-process analysis, will complete it soon.&lt;/font&gt;&lt;a class="anchor-link" href="#This-is-in-process-analysis,-will-complete-it-soon."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="This-is-in-process-analysis,-will-complete-it-soon."&gt;&lt;font color="red"&gt;This is in-process analysis, will complete it soon.&lt;/font&gt;&lt;a class="anchor-link" href="#This-is-in-process-analysis,-will-complete-it-soon."&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -99,7 +64,42 @@
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;../../input/energy_production/IPG2211A2N.csv …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Sun, 06 May 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-05-06:/01-data-analysis-notebooks/time-series-analysis-python/</guid><category>time series</category><category>python</category><category>statsmodel</category><category>forecasting</category><category>plotly</category></item><item><title>Cleaning Text Data (Tokenization)</title><link>https://gauravmodi.com/02-natural_-language_processing/cleaning_text_data/</link><description>
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;../../input/energy_production/IPG2211A2N.csv …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Fri, 01 Jun 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-06-01:/01-data-analysis-notebooks/time-series-analysis-python/</guid><category>time series</category><category>python</category><category>statsmodel</category><category>forecasting</category><category>plotly</category></item><item><title>One-Word-In, One-Word-Out Sequences</title><link>https://gauravmodi.com/02-natural_-language_processing/one-word-in-one-word-out-sequences/</link><description>
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[0]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.preprocessing.text&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Tokenizer&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.utils&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;to_categorical&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Embedding&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LSTM&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Sample-Text"&gt;Sample Text&lt;a class="anchor-link" href="#Sample-Text"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[0]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# source text&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot; Jack and Jill went up the hill&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&lt;/span&gt;
+&lt;span class="s2"&gt;        To fetch a pail of water …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaurav Modi</dc:creator><pubDate>Thu, 10 May 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:gauravmodi.com,2018-05-10:/02-natural_-language_processing/one-word-in-one-word-out-sequences/</guid><category>nlp</category><category>word_prediction</category><category>python</category><category>keras</category></item><item><title>Cleaning Text Data (Tokenization)</title><link>https://gauravmodi.com/02-natural_-language_processing/cleaning_text_data/</link><description>
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
