@@ -98,10 +98,12 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
 }
 
-
 # ipynb configuration
 MARKUP = ('md', 'ipynb', )
 IGNORE_FILES = ['.ipynb_checkpoints']   # Prevent parsing checkpoints files
+
+#Markdown Extensions
+MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra']
 
 # plugins configuration
 PLUGIN_PATHS = ['./plugins']
