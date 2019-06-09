@@ -1,8 +1,20 @@
 # Source for https://gauravmodi.com
 
+### Setup on new system
+Note: Use Python 3
+- Activate a virutalenv
+- Install below pacakges:
+```
+- jupyter
+- pelican==3.7.1
+- Markdown
+- typogrify
+```
+- Follow below instructions
+
 ## Activate virtual environment
 ```
-$ source projects/environments/ml_blog/bin/activate
+$ source projects/environments/gauravmodi_com/bin/activate
 $ cd projects/pelican/gauravmodi.github.io/
 ```
 
