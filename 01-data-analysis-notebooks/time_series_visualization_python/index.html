@@ -131,8 +131,7 @@ Gaurav Modi            </a>
                 </div>
                 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Data Source: <a href="https://www.kaggle.com/sudalairajkumar/indian-startup-funding/data">https://www.kaggle.com/sudalairajkumar/indian-startup-funding/data</a></li>
@@ -143,8 +142,7 @@ Gaurav Modi            </a>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Importing-Libraries">Importing Libraries<a class="anchor-link" href="#Importing-Libraries">&#182;</a></h3>
 </div>
@@ -164,14 +162,13 @@ Gaurav Modi            </a>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Reading-data">Reading data<a class="anchor-link" href="#Reading-data">&#182;</a></h3>
 </div>
@@ -190,14 +187,13 @@ Gaurav Modi            </a>
 <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;SNo&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data-headshot">Data headshot<a class="anchor-link" href="#Data-headshot">&#182;</a></h3>
 </div>
@@ -211,7 +207,7 @@ Gaurav Modi            </a>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -221,7 +217,7 @@ Gaurav Modi            </a>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -348,7 +344,7 @@ Gaurav Modi            </a>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year-Month&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -358,7 +354,7 @@ Gaurav Modi            </a>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -371,7 +367,7 @@ Gaurav Modi            </a>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1332,8 +1328,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Grouping-by-index-of-dataframe">Grouping by index of dataframe<a class="anchor-link" href="#Grouping-by-index-of-dataframe">&#182;</a></h3>
 </div>
@@ -1349,7 +1344,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1359,7 +1354,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -1478,7 +1473,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;AmountInUSD&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})[</span><span class="s1">&#39;AmountInUSD&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1491,7 +1486,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ts</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1501,7 +1496,7 @@ hBBCCCFGFQmEhRBCCCGEEEKMKhIICyGEEEIIIYQYVf4/m0kV6xY5LKoAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -1566,7 +1561,7 @@ Name: AmountInUSD, dtype: float64</pre>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2018 <a href="https://www.linkedin.com/in/modigaurav01/" target="_blank">Gaurav Modi</a>
+         <div class="col-xs-10">&copy; 2019 <a href="https://www.linkedin.com/in/modigaurav01/" target="_blank">Gaurav Modi</a>
             <!-- &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> -->         </div>

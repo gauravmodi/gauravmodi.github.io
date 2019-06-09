@@ -137,8 +137,7 @@ Gaurav Modi            </a>
                 </div>
                 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="New-York-Taxi-Data-Analysis">New York Taxi Data Analysis<a class="anchor-link" href="#New-York-Taxi-Data-Analysis">&#182;</a></h1><hr>
 <h3 id="Introduction"><u>Introduction</u><a class="anchor-link" href="#Introduction">&#182;</a></h3><p>In this analysis, I will be analysing the New York Taxi Data for Green&nbsp;Taxi.</p>
@@ -174,8 +173,7 @@ So most of the trips of Green Taxi starts from Brooklyn, Manhattan, Queens and B
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Importing-Packages">Importing Packages<a class="anchor-link" href="#Importing-Packages">&#182;</a></h3>
@@ -223,7 +221,7 @@ So most of the trips of Green Taxi starts from Brooklyn, Manhattan, Queens and B
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -251,14 +249,13 @@ So most of the trips of Green Taxi starts from Brooklyn, Manhattan, Queens and B
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span> <span class="s1">&#39;Arial&#39;</span><span class="p">,</span> <span class="s1">&#39;Open Sans&#39;</span><span class="p">,</span> <span class="s1">&#39;Bitstream Vera Sans&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-loading-and-Preprocessing">Data loading and Preprocessing<a class="anchor-link" href="#Data-loading-and-Preprocessing">&#182;</a></h2><h3 id="Read-data">Read data<a class="anchor-link" href="#Read-data">&#182;</a></h3>
 </div>
@@ -269,12 +266,12 @@ So most of the trips of Green Taxi starts from Brooklyn, Manhattan, Queens and B
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span> 
-data = pd.read_csv(&#39;./data/green_tripdata_2015-09.csv&#39;, 
-                   parse_dates=[&#39;lpep_pickup_datetime&#39;, &#39;Lpep_dropoff_datetime&#39;])
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span> 
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/green_tripdata_2015-09.csv&#39;</span><span class="p">,</span> 
+                   <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lpep_pickup_datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;Lpep_dropoff_datetime&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -284,7 +281,7 @@ data = pd.read_csv(&#39;./data/green_tripdata_2015-09.csv&#39;,
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -310,14 +307,13 @@ Wall time: 21.2 s
 <span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Size-of-data">Size of data<a class="anchor-link" href="#Size-of-data">&#182;</a></h3>
 </div>
@@ -331,7 +327,7 @@ Wall time: 21.2 s
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of rows:</span><span class="si">{0}</span><span class="s1"> and number of columns: </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -341,7 +337,7 @@ Wall time: 21.2 s
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -355,24 +351,21 @@ Wall time: 21.2 s
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Number-of-rows:-1,494,926-and-number-of-columns:-21"><font color="blue">Number of rows: 1,494,926 and number of columns: 21</font><a class="anchor-link" href="#Number-of-rows:-1,494,926-and-number-of-columns:-21">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data-cleaning">Data cleaning<a class="anchor-link" href="#Data-cleaning">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Missing&nbsp;values</strong></p>
 
@@ -391,7 +384,7 @@ Wall time: 21.2 s
                                <span class="n">cmap</span><span class="o">=</span><span class="n">cm_table</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -401,7 +394,7 @@ Wall time: 21.2 s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -529,8 +522,7 @@ Wall time: 21.2 s
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h3><ul>
 <li>As we see above that all the values in column &#8216;Ehail_fee&#8217; are missing. Therefore, I will drop the Ehail_fee&#8217; column from the&nbsp;dataframe.</li>
@@ -570,7 +562,7 @@ Wall time: 21.2 s
 <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -591,14 +583,13 @@ Wall time: 21.2 s
 <span class="n">df</span> <span class="o">=</span> <span class="n">get_borough_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="DATA-ANALYSIS"><u><span class="caps">DATA</span> <span class="caps">ANALYSIS</span></u><a class="anchor-link" href="#DATA-ANALYSIS">&#182;</a></h1><h2 id="1.-Taking-a-Cab-(pickup-by-a-taxi).">1. Taking a Cab (pickup by a taxi).<a class="anchor-link" href="#1.-Taking-a-Cab-(pickup-by-a-taxi).">&#182;</a></h2><p><img src="../../images/plots/Cab_trip_pickup.png" alt="Drawing" align="middle" style="width: 850px;"/></p>
 
@@ -606,8 +597,7 @@ Wall time: 21.2 s
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1-Pickup-locations-coordinates-on-a-scatter-plot">1.1 Pickup locations coordinates on a scatter plot<a class="anchor-link" href="#1.1-Pickup-locations-coordinates-on-a-scatter-plot">&#182;</a></h3>
 </div>
@@ -621,7 +611,7 @@ Wall time: 21.2 s
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">location_type</span><span class="o">=</span><span class="s1">&#39;pickup&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">kgy</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -631,7 +621,7 @@ Wall time: 21.2 s
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -646,8 +636,7 @@ Wall time: 21.2 s
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As we see from above scatter plot that area with most concentration of points is Brooklyn, Manhattan, Queens and Brox (in that order). This is also confirmed in below bar plot of boroughs and trip&nbsp;count.</strong></p>
 
@@ -675,7 +664,7 @@ Wall time: 21.2 s
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -685,7 +674,7 @@ Wall time: 21.2 s
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -703,8 +692,7 @@ Wall time: 21.2 s
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2-Number-of-Trips-through-the-day">1.2 Number of Trips through the day<a class="anchor-link" href="#1.2-Number-of-Trips-through-the-day">&#182;</a></h3>
 </div>
@@ -726,7 +714,7 @@ Wall time: 21.2 s
 <span class="n">trip_count_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trip_count_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">hour_beautify</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -757,7 +745,7 @@ Wall time: 21.2 s
             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -767,7 +755,7 @@ Wall time: 21.2 s
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -785,8 +773,7 @@ Wall time: 21.2 s
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As we see above lowest trips happen in morning in between 5-6 am and most trips happen around 6 pm.
 Using this information we can say that Traffic is lowest and highest on <span class="caps">NYC</span> roads at these times&nbsp;respectively.</strong></p>
@@ -795,8 +782,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Enroute-to-the-destination.">2. Enroute to the destination.<a class="anchor-link" href="#2.-Enroute-to-the-destination.">&#182;</a></h2><p>In this section we analyse about the route to&nbsp;destination(dropoff)</p>
 
@@ -804,8 +790,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="../../images/plots/Cab_trip_enroute.png" alt="Drawing" align="middle" style="width: 850px;"/></p>
 
@@ -813,8 +798,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.1-Trip-Distance-Distribution">2.1 Trip Distance Distribution<a class="anchor-link" href="#2.1-Trip-Distance-Distribution">&#182;</a></h3>
 </div>
@@ -836,7 +820,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">});</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -846,7 +830,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -864,8 +848,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color='red'><b><span class="caps">NOTE</span>: Usually for this plot there is warning, which is just a recent bug in seaborn, patch is not available in any stable version yet.</b></font> <br>Refer: <a href="https://github.com/mwaskom/seaborn/issues/1392">https://github.com/mwaskom/seaborn/issues/1392</a></p>
 
@@ -873,8 +856,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.2-Mean-and-Median-Trip-Distance-grouped-by-hour-of-day.">2.2 Mean and Median Trip Distance grouped by hour of day.<a class="anchor-link" href="#2.2-Mean-and-Median-Trip-Distance-grouped-by-hour-of-day.">&#182;</a></h3>
 </div>
@@ -894,7 +876,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">trip_distance_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trip_distance_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">hour_beautify</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -909,7 +891,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
                                <span class="n">cmap</span><span class="o">=</span><span class="n">cm_table</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -919,7 +901,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -1186,7 +1168,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">});</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1196,7 +1178,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1214,8 +1196,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.3-Trip-Speed-Analysis">2.3 Trip Speed Analysis<a class="anchor-link" href="#2.3-Trip-Speed-Analysis">&#182;</a></h3>
 </div>
@@ -1240,7 +1221,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1250,7 +1231,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1268,8 +1249,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.4-Average-trip-speed-through-day">2.4 Average trip speed through day<a class="anchor-link" href="#2.4-Average-trip-speed-through-day">&#182;</a></h3>
 </div>
@@ -1289,7 +1269,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">trip_speed_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trip_speed_agg</span><span class="p">[</span><span class="s1">&#39;Hour of Day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">hour_beautify</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1321,7 +1301,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">});</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1331,7 +1311,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1349,8 +1329,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><b>From above we can see that Mean and Median Speed is highest in morning from 5-6 am. This confirms our earlier hypothesis that Traffic is lowest in early morning and highest in evening around 4-6&nbsp;pm.</b></p>
 
@@ -1358,16 +1337,14 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Cab-Dropoff-Analysis">3. Cab Dropoff Analysis<a class="anchor-link" href="#3.-Cab-Dropoff-Analysis">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="../../images/plots/Cab_trip_dropoff.png" alt="Drawing" align="middle" style="width: 850px;"/></p>
 
@@ -1375,8 +1352,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.1-Dropoff-locations-coordinates-on-a-scatter-plot">3.1 Dropoff locations coordinates on a scatter plot<a class="anchor-link" href="#3.1-Dropoff-locations-coordinates-on-a-scatter-plot">&#182;</a></h3>
 </div>
@@ -1390,7 +1366,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">location_type</span><span class="o">=</span><span class="s1">&#39;dropoff&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">fire</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1400,7 +1376,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -1415,8 +1391,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As we see from above scatter plot that area with most concentration of points are Manhattan, Brooklyn, Queens and Brox (in that order). This is also confirmed in below bar plot of boroughs and trip&nbsp;count.</strong></p>
 
@@ -1444,7 +1419,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1454,7 +1429,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1472,8 +1447,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.2-Fare-Analysis">3.2 Fare Analysis<a class="anchor-link" href="#3.2-Fare-Analysis">&#182;</a></h3>
 </div>
@@ -1498,7 +1472,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1508,7 +1482,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
@@ -1520,7 +1494,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1538,8 +1512,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As we can see that &#8216;Total Fare&#8217; distribution is right skewed and therefore we seen higher mean than median. That is we have large number of rides with Total Fare less than \$40. But along with that there are few rides with high fare above&nbsp;\$100.</strong></p>
 
@@ -1547,8 +1520,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.-Airport-Rides-Analysis">4. Airport Rides Analysis<a class="anchor-link" href="#4.-Airport-Rides-Analysis">&#182;</a></h3><p>Link: <a href="http://www.nyc.gov/html/tlc/html/passenger/taxicab_rate.shtml">http://www.nyc.gov/html/tlc/html/passenger/taxicab_rate.shtml</a></p>
 <p><p>From above link, I found that trips with &#8216;RateCodeID&#8217; equal to 2 and 3 are <span class="caps">JFK</span> airport and Newark Airport rides respectively. Since Green Taxis are not allowed to pickup passengers from any Airport we can assume that all trips with RateCodeID 2 and 3 are all going to Airport and <span class="caps">NOT</span> coming from&nbsp;airport.</p>
@@ -1567,8 +1539,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Since Green Taxi are not allowed to Pickup from Airports, therefore only rides with RateCodeID equal to 2 and 3 are the ones going to Airport from outer&nbsp;boroughs.</strong></p>
 
@@ -1588,7 +1559,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
                                                                       <span class="n">df_airport_original</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1598,7 +1569,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1612,16 +1583,14 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Original-Number-of-rows:-5,552-and-number-of-columns:-21"><font color="blue">Original Number of rows: 5,552 and number of columns: 21</font><a class="anchor-link" href="#Original-Number-of-rows:-5,552-and-number-of-columns:-21">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note: Code for below plot is in Appendix.
 <img src='./plots/ALL_dropoffs.png' alt="Drawing" style="width: 850px;"/></p>
@@ -1630,8 +1599,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>When I filter the trips with RateCodeID 2 and 3, we see in below plot the two major dropoff&nbsp;locations: </strong></p>
 <ul>
@@ -1689,7 +1657,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1699,7 +1667,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1741,7 +1709,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1751,7 +1719,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1769,8 +1737,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Interestingly for Newark Airport trips we see proportionally more number of &#8220;No Charge&#8221; (Code 3) and &#8220;Dispute&#8221;(Code 4) for Payment&nbsp;type.</strong></p>
 
@@ -1778,8 +1745,7 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="5.Machine-Learning-Model-to-Predict-Tip-as-percentage-of-Total-Fare">5.Machine Learning Model to Predict Tip as percentage of Total Fare<a class="anchor-link" href="#5.Machine-Learning-Model-to-Predict-Tip-as-percentage-of-Total-Fare">&#182;</a></h2><h3 id="5.1-Creating-a-derived-variable-for-tip-as-a-percentage-of-the-total-fare.">5.1 Creating a derived variable for tip as a percentage of the total fare.<a class="anchor-link" href="#5.1-Creating-a-derived-variable-for-tip-as-a-percentage-of-the-total-fare.">&#182;</a></h3><p><strong>Since we have trips where total_amount is zero, and to avoid error while calculating percentage tip, I&#8217;m replacing zero with 0.001 value, which is negligible in terms of&nbsp;money</strong></p>
@@ -1796,14 +1762,13 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;percentage_tip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">Tip_amount</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">Total_amount</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="5.2-Defining-Predictors-and-Target-Variable">5.2 Defining Predictors and Target Variable<a class="anchor-link" href="#5.2-Defining-Predictors-and-Target-Variable">&#182;</a></h3><p><font color='red'><b>Thing to notice is that we should not include &#8216;Tip Amount&#8217; or &#8216;Total Amount&#8217; to Predict the tip percentage of total fare. Otherwise it will be data leakage from predictors to response variable.</b></font></p>
 
@@ -1824,14 +1789,13 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;percentage_tip&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="5.3-Spliting-the-data-into-training,-validation-and-testing-dataset">5.3 Spliting the data into training, validation and testing dataset<a class="anchor-link" href="#5.3-Spliting-the-data-into-training,-validation-and-testing-dataset">&#182;</a></h3>
 </div>
@@ -1863,14 +1827,13 @@ Using this information we can say that Traffic is lowest and highest on <span cl
 <span class="n">df_test</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_idx</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="5.4-Label-Encoding-Categorical-column">5.4 Label Encoding Categorical column<a class="anchor-link" href="#5.4-Label-Encoding-Categorical-column">&#182;</a></h3>
 </div>
@@ -1897,14 +1860,13 @@ Using this information we can say that Traffic is lowest and highest on <span cl
     <span class="n">df_test</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_test</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="5.5-Best-Model-Fit">5.5 Best Model Fit<a class="anchor-link" href="#5.5-Best-Model-Fit">&#182;</a></h3><p>Below is final model I&#8217;m using for&nbsp;predictions.</p>
 <p><p>Even though I&#8217;m just using 30 trees in Random Forest model, more tree seems to be improving the performance.
@@ -1943,7 +1905,7 @@ Also, I&#8217;m only using 100k data set to train the model, 20k to validate and
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">predictors</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_train</span><span class="o">.</span><span class="n">percentage_tip</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1970,7 +1932,7 @@ Also, I&#8217;m only using 100k data set to train the model, 20k to validate and
     <span class="k">return</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">mae</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1990,7 +1952,7 @@ Also, I&#8217;m only using 100k data set to train the model, 20k to validate and
 <span class="n">metric</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2000,7 +1962,7 @@ Also, I&#8217;m only using 100k data set to train the model, 20k to validate and
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -2028,7 +1990,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2038,7 +2000,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2056,8 +2018,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Important-Predictors">Important Predictors<a class="anchor-link" href="#Important-Predictors">&#182;</a></h4><ul>
 <li><p><strong>Payment Type</strong> is the most important predictors. The reason for this that 100% all tips come from rides where passenger paid the fare using Credit card. Therefore, payment type gives the indication whether passenger is going to pay the tip or&nbsp;not.</p>
@@ -2087,7 +2048,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
                                <span class="n">cmap</span><span class="o">=</span><span class="n">cm_table</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2097,7 +2058,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -2169,8 +2130,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Payment-Type-distribution-for-Tips">Payment Type distribution for Tips<a class="anchor-link" href="#Payment-Type-distribution-for-Tips">&#182;</a></h4>
 </div>
@@ -2217,7 +2177,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2227,7 +2187,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2245,8 +2205,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Pickup-Borough-distribution-for-Tips">Pickup Borough distribution for Tips<a class="anchor-link" href="#Pickup-Borough-distribution-for-Tips">&#182;</a></h4>
 </div>
@@ -2290,7 +2249,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">});</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2300,7 +2259,7 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2318,16 +2277,14 @@ Performance on Test Data: RMSE: 4.76 | MAE 2.42
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6.-Visualization-of-Intra-Borough-and-Inter-Borough-Trips">6. Visualization of Intra-Borough and Inter-Borough Trips<a class="anchor-link" href="#6.-Visualization-of-Intra-Borough-and-Inter-Borough-Trips">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now I will be looking at rides from boroughs perspective. That is pickup borough and dropoff&nbsp;borough.</p>
 <p><p>This is the map of Boroughs of New York City. 
@@ -2345,8 +2302,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Map-of-all-Pickups-and-Dropoffs-in-Sept-2015">Map of all Pickups and Dropoffs in Sept 2015<a class="anchor-link" href="#Map-of-all-Pickups-and-Dropoffs-in-Sept-2015">&#182;</a></h3>
 </div>
@@ -2363,7 +2319,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="n">tf</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;black&#39;</span><span class="p">),</span> <span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2373,7 +2329,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -2388,8 +2344,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="6.1-Intra-Borough-Rides">6.1 Intra-Borough Rides<a class="anchor-link" href="#6.1-Intra-Borough-Rides">&#182;</a></h3><h4 id="6.1.1-Map-of-Intra-Borough-Rides-Pickup">6.1.1 Map of Intra-Borough Rides Pickup<a class="anchor-link" href="#6.1.1-Map-of-Intra-Borough-Rides-Pickup">&#182;</a></h4>
 </div>
@@ -2405,7 +2360,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;within_borough&#39;</span><span class="p">]],</span> <span class="s1">&#39;pickup&#39;</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">kgy</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2415,7 +2370,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -2426,7 +2381,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -2441,8 +2396,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.1.2-Map-of-Intra-Borough-Rides-Dropoffs">6.1.2 Map of Intra-Borough Rides Dropoffs<a class="anchor-link" href="#6.1.2-Map-of-Intra-Borough-Rides-Dropoffs">&#182;</a></h4>
 </div>
@@ -2456,7 +2410,7 @@ We can see 5&nbsp;boroughs:</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;within_borough&#39;</span><span class="p">]],</span> <span class="s1">&#39;dropoff&#39;</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">fire</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2466,7 +2420,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -2481,8 +2435,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As we see in above pickup and dropoff plots, Green Taxi can pick passengers only from Outer-Boroughs, but they can drop passenger anywhere including Lower Manhattan, and&nbsp;Airports</strong></p>
 
@@ -2490,8 +2443,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.1.3-Pickup-and-Dropoff-Statistics">6.1.3 Pickup and Dropoff Statistics<a class="anchor-link" href="#6.1.3-Pickup-and-Dropoff-Statistics">&#182;</a></h4>
 </div>
@@ -2535,7 +2487,7 @@ We can see 5&nbsp;boroughs:</p>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2545,7 +2497,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2563,8 +2515,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.1.4-.-Overlap-of-Intra-borough-Pickups-and-Dropoffs">6.1.4 . Overlap of Intra-borough Pickups and Dropoffs<a class="anchor-link" href="#6.1.4-.-Overlap-of-Intra-borough-Pickups-and-Dropoffs">&#182;</a></h4>
 </div>
@@ -2582,7 +2533,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="n">tf</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;black&#39;</span><span class="p">),</span> <span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2592,7 +2543,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -2607,8 +2558,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="6.2-Inter-Borough-Rides">6.2 Inter-Borough Rides<a class="anchor-link" href="#6.2-Inter-Borough-Rides">&#182;</a></h3><h4 id="6.2.1-Map-of-Inter-Borough-Rides-Pickup">6.2.1 Map of Inter-Borough Rides Pickup<a class="anchor-link" href="#6.2.1-Map-of-Inter-Borough-Rides-Pickup">&#182;</a></h4>
 </div>
@@ -2623,7 +2573,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;within_borough&#39;</span><span class="p">]],</span> <span class="s1">&#39;pickup&#39;</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">kgy</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2633,7 +2583,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -2648,8 +2598,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.2.2-Map-of-Inter-Borough-Rides-Dropoffs">6.2.2 Map of Inter-Borough Rides Dropoffs<a class="anchor-link" href="#6.2.2-Map-of-Inter-Borough-Rides-Dropoffs">&#182;</a></h4>
 </div>
@@ -2663,7 +2612,7 @@ We can see 5&nbsp;boroughs:</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_map</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;within_borough&#39;</span><span class="p">]],</span> <span class="s1">&#39;dropoff&#39;</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">fire</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2673,7 +2622,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -2688,8 +2637,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>As seen in above scatter plot and also in below bar plot, most of the Inter-borough Dropoffs happen in Manhattan, particularly in Lower&nbsp;Manhattan</strong></p>
 
@@ -2697,8 +2645,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.2.3-Pickup-and-Dropoff-Statistics">6.2.3 Pickup and Dropoff Statistics<a class="anchor-link" href="#6.2.3-Pickup-and-Dropoff-Statistics">&#182;</a></h4>
 </div>
@@ -2742,7 +2689,7 @@ We can see 5&nbsp;boroughs:</p>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2752,7 +2699,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2770,8 +2717,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="6.2.4-.-Overlap-of-Inter-borough-Pickups-and-Dropoffs">6.2.4 . Overlap of Inter-borough Pickups and Dropoffs<a class="anchor-link" href="#6.2.4-.-Overlap-of-Inter-borough-Pickups-and-Dropoffs">&#182;</a></h4><p>(Code in&nbsp;Appendix)</p>
 <p><img src='../../images/plots/inter_pickups_dropoffs.png' alt="Drawing" style="width: 850px;"/></p>
@@ -2780,8 +2726,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Summary-of-Above-Visualization-we-can-say:">Summary of Above Visualization we can say:<a class="anchor-link" href="#Summary-of-Above-Visualization-we-can-say:">&#182;</a></h3><ul>
 <li>New Yorkers travelling in Green Taxi Cab for Intra-borough are from&nbsp;Brooklyn.</li>
@@ -2793,8 +2738,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Time-lapse-video-of-all-dropoffs-in-24-hours-over-whole-month.">Time lapse video of all dropoffs in 24 hours over whole month.<a class="anchor-link" href="#Time-lapse-video-of-all-dropoffs-in-24-hours-over-whole-month.">&#182;</a></h3>
 </div>
@@ -2812,7 +2756,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2822,7 +2766,7 @@ We can see 5&nbsp;boroughs:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -2841,8 +2785,7 @@ We can see 5&nbsp;boroughs:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>As we see total rides are lowest around early moring 3-5 am and highest in the evening&nbsp;4-8pm.</li>
@@ -2852,8 +2795,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Further-Analysis">Further Analysis<a class="anchor-link" href="#Further-Analysis">&#182;</a></h2><ul>
 <li>For this analysis, I have removed lot of cases where Total Amount, Tip, Fare etc were less than zero. I&#8217;m not sure why this is the case. We need to look into why this is&nbsp;happening.</li>
@@ -2864,8 +2806,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1 id="APPENDIX"><span class="caps">APPENDIX</span><a class="anchor-link" href="#APPENDIX">&#182;</a></h1><hr>
@@ -2874,8 +2815,7 @@ We can see 5&nbsp;boroughs:</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Code-to-show-image-in-markdown-cell">Code to show image in markdown cell<a class="anchor-link" href="#Code-to-show-image-in-markdown-cell">&#182;</a></h3>
 </div>
@@ -2889,14 +2829,13 @@ We can see 5&nbsp;boroughs:</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &lt;img src=&#39;./plots/inter_pickups_dropoffs.png&#39; alt=&quot;Drawing&quot; style=&quot;width: 850px;&quot;/&gt;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Code-to-save-a-scatter-plot-map-to-disk">Code to save a scatter plot map to disk<a class="anchor-link" href="#Code-to-save-a-scatter-plot-map-to-disk">&#182;</a></h3>
 </div>
@@ -2911,14 +2850,13 @@ We can see 5&nbsp;boroughs:</p>
 <span class="c1">#                       &#39;ALL_dropoffs&#39;, fmt=&#39;.png&#39;,export_path=&#39;/mnt/hgfs/ubuntu shared folder&#39;)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Airport-Dropoffs">Airport Dropoffs<a class="anchor-link" href="#Airport-Dropoffs">&#182;</a></h3>
 </div>
@@ -2932,14 +2870,13 @@ We can see 5&nbsp;boroughs:</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot_map(df_airport, location_type=&#39;dropoff&#39;, cmap=fire, plot_height=600, plot_width=700)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Overlap-of-Inter-borough-Pickups-and-Dropoffs">Overlap of Inter-borough Pickups and Dropoffs<a class="anchor-link" href="#Overlap-of-Inter-borough-Pickups-and-Dropoffs">&#182;</a></h3>
 </div>
@@ -2957,7 +2894,7 @@ We can see 5&nbsp;boroughs:</p>
 <span class="c1"># tf.stack(tf.set_background(img[1],&#39;black&#39;), img[0])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3006,7 +2943,7 @@ We can see 5&nbsp;boroughs:</p>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2018 <a href="https://www.linkedin.com/in/modigaurav01/" target="_blank">Gaurav Modi</a>
+         <div class="col-xs-10">&copy; 2019 <a href="https://www.linkedin.com/in/modigaurav01/" target="_blank">Gaurav Modi</a>
             <!-- &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> -->         </div>
