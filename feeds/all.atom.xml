@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi</title><link href="https://gauravmodi.com/" rel="alternate"></link><link href="https://gauravmodi.com/feeds/all.atom.xml" rel="self"></link><id>https://gauravmodi.com/</id><updated>2019-02-11T00:00:00-08:00</updated><entry><title>Logistic Regression</title><link href="https://gauravmodi.com/03-machine_learning/post-url-to-be-used/" rel="alternate"></link><published>2019-02-11T00:00:00-08:00</published><updated>2019-02-11T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2019-02-11:/03-machine_learning/post-url-to-be-used/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gaurav Modi</title><link href="https://gauravmodi.com/" rel="alternate"></link><link href="https://gauravmodi.com/feeds/all.atom.xml" rel="self"></link><id>https://gauravmodi.com/</id><updated>2019-02-11T00:00:00-08:00</updated><entry><title>Logistic Regression in Python</title><link href="https://gauravmodi.com/03-machine_learning/post-url-to-be-used/" rel="alternate"></link><published>2019-02-11T00:00:00-08:00</published><updated>2019-02-11T00:00:00-08:00</updated><author><name>Gaurav Modi</name></author><id>tag:gauravmodi.com,2019-02-11:/03-machine_learning/post-url-to-be-used/</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Logistic-Regression-in-Python"&gt;Logistic Regression in Python&lt;a class="anchor-link" href="#Logistic-Regression-in-Python"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We can use Linear Reg. for binary classification but it can give &lt;code&gt;y&lt;/code&gt; as more than 1 or less than 0 even when possible classes are 1 and 0. 
+&lt;p&gt;We can use Linear Reg. for binary classification but it can give &lt;code&gt;y&lt;/code&gt; as more than 1 or less than 0 even when possible classes are 1 and 0. 
 When we use Linear Reg. for  binary classification it gives same result as &lt;span class="caps"&gt;LDA&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;:&lt;/strong&gt; Put Logistic …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;:&lt;/strong&gt; Put Logistic Function equatiom and cost …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Logistic-Regression-in-Python"&gt;Logistic Regression in Python&lt;a class="anchor-link" href="#Logistic-Regression-in-Python"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We can use Linear Reg. for binary classification but it can give &lt;code&gt;y&lt;/code&gt; as more than 1 or less than 0 even when possible classes are 1 and 0. 
+&lt;p&gt;We can use Linear Reg. for binary classification but it can give &lt;code&gt;y&lt;/code&gt; as more than 1 or less than 0 even when possible classes are 1 and 0. 
 When we use Linear Reg. for  binary classification it gives same result as &lt;span class="caps"&gt;LDA&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;:&lt;/strong&gt; Put Logistic Function equatiom and cost function equation&amp;nbsp;here:&lt;/p&gt;
 &lt;p&gt;We can use logistic regression for multi-class classification but not used that often, it is mostly used for binary&amp;nbsp;classification.&lt;/p&gt;
