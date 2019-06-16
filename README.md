@@ -36,7 +36,9 @@ Place it in the first block of Jupyter notebook
 $ cd gauravmodi.github.io
 $ pelican content --debug --autoreload  --output output --settings pelicanconf.py
 $ cd output
-$ python -m pelican.server # OR python -m pelican.server 8000
+$ python -m pelican.server 
+# OR 
+# python -m pelican.server 8000
 ```
 
 Go to: http://localhost:8000/
